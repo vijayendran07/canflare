@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-surface":"#1b1c1a","on-primary-container":"#736b00","surface":"#fbf9f5","primary-fixed-dim":"#d7ca00","surface-variant":"#e4e2de","outline-variant":"#ccc7aa","secondary-fixed":"#ffdea4","on-error-container":"#93000a","on-secondary":"#ffffff","on-error":"#ffffff","on-secondary-fixed-variant":"#5d4200","on-tertiary-fixed":"#201a15","on-background":"#1b1c1a","surface-container-low":"#f5f3ef","on-primary-fixed-variant":"#4d4800","on-primary-fixed":"#1f1c00","surface-tint":"#676000","primary-container":"#ffef00","on-tertiary":"#ffffff","on-surface-variant":"#4a4731","primary-fixed":"#f6e600","on-primary":"#ffffff","surface-bright":"#fbf9f5","on-tertiary-container":"#716861","on-secondary-container":"#6c4d00","tertiary-fixed-dim":"#d0c4bb","secondary":"#7b5800","surface-container-high":"#eae8e4","background":"#fbf9f5","tertiary-container":"#f6e9df","primary":"#676000","tertiary-fixed":"#ede0d7","error-container":"#ffdad6","surface-container-lowest":"#ffffff","surface-dim":"#dbdad6","on-secondary-fixed":"#261900","on-tertiary-fixed-variant":"#4d453f","error":"#ba1a1a","surface-container-highest":"#e4e2de","secondary-container":"#ffbb00","inverse-primary":"#d7ca00","surface-container":"#efeeea","tertiary":"#665d55","outline":"#7b785f","inverse-surface":"#30312e","inverse-on-surface":"#f2f0ed","secondary-fixed-dim":"#ffbb00"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","margin":"4rem","gutter-mobile":"1rem","space-lg":"1.75rem","space-md":"1rem","space-xl":"3rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem"},"fontFamily":{"display-hero":["Playfair Display"]},"fontSize":{"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-sans text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(45,36,26,0.06)]"><div class="w-full bg-surface-container py-1.5 px-margin-mobile lg:px-margin text-center tracking-widest text-[11px] font-medium uppercase text-on-surface-variant"><p>COMPLIMENTARY SHIPPING ON ORDERS OVER ₹1,499  |  HANDCRAFTED IN SMALL BATCHES</p></div><div class="h-24 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-6"><div class="flex-shrink-0"><a class="flex flex-col" data-path="home" href="#"><span class="font-display-hero text-2xl lg:text-3xl tracking-tight text-on-surface font-normal">Lueur &amp; Co.</span><span class="text-[9px] uppercase tracking-[0.25em] text-on-surface-variant -mt-1">Artisan Aromatics</span></a></div><div class="hidden md:flex flex-1 max-w-md mx-6"><div class="relative w-full flex items-center bg-surface-container-lowest rounded-DEFAULT"><input class="w-full bg-transparent pl-4 pr-11 py-2 text-xs text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-1 focus:ring-secondary-container" placeholder="Search candles, fragrances, notes..." type="text"/><button aria-label="Search" class="absolute right-1 top-1 bottom-1 w-8 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-DEFAULT hover:opacity-90 transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">search</span></button></div></div><nav class="hidden lg:flex items-center gap-7" data-active-classes="text-on-surface font-semibold"><a class="text-xs tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="text-xs tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-colors" data-path="product-listing" href="#">Shop / All Candles</a><a class="text-xs tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-colors" data-path="collections" href="#">Collections</a><a class="text-xs tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="text-xs tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-4 flex-shrink-0"><a aria-label="Wishlist" class="text-on-surface-variant hover:text-on-surface transition-colors p-1" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span></a><a aria-label="Cart" class="relative text-on-surface-variant hover:text-on-surface transition-colors p-1" data-path="shopping-cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-1 bg-secondary-container text-on-secondary-container text-[10px] font-semibold w-4 h-4 rounded-full flex items-center justify-center">2</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-32 bg-surface min-h-[calc(100vh-28rem)]"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Micro-Banner -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-4 pb-6">
+<nav aria-label="Breadcrumb" class="flex items-center text-[11px] tracking-widest uppercase text-on-surface-variant font-medium space-x-2">
+<a class="hover:text-on-surface transition-colors" data-path="home" href="#">Home</a>
+<span class="text-tertiary-fixed-dim">/</span>
+<a class="hover:text-on-surface transition-colors" data-path="product-listing" href="#">Shop</a>
+<span class="text-tertiary-fixed-dim">/</span>
+<a class="hover:text-on-surface transition-colors" data-path="collections" href="#">Scented Candles</a>
+<span class="text-tertiary-fixed-dim">/</span>
+<span class="text-on-surface font-semibold">Sandalwood Luxury Candle</span>
+</nav>
+</section>
+<!-- Product Hero (Split View) -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin pb-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left Column: Gallery -->
+<div class="lg:col-span-7 flex flex-col gap-5">
+<div class="relative w-full aspect-[4/5] bg-surface-container rounded-DEFAULT overflow-hidden shadow-sm group">
+<!-- Floating Atelier Badge -->
+<div class="absolute top-5 left-5 z-20 bg-surface/90 backdrop-blur-md px-3.5 py-1.5 rounded-DEFAULT shadow-sm">
+<span class="text-[10px] tracking-[0.2em] uppercase font-semibold text-secondary">100% Handcrafted Small Batch</span>
+</div>
+<!-- Zoom Indicator -->
+<button aria-label="Enlarge image" class="absolute bottom-5 right-5 z-20 w-10 h-10 bg-surface/85 backdrop-blur-md text-on-surface rounded-DEFAULT flex items-center justify-center shadow-sm hover:bg-surface transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+<!-- Main Image -->
+<img class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="A warm, atmospheric product photograph of a luxury amber glass jar candle lit with a gentle golden flame and crackling wooden wick. The candle is styled on rough beige limestone amidst aged sandalwood chips, dried botanical star anise, and warm diffused afternoon sunlight casting gentle organic shadows. Earthy, warm minimalist luxury aesthetic." id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWp6_qjumfPJUyt1oU-X9JkWeADDBN7ASFx6njLT-mKRDjRwpHAGRaEPYmjVNNORkaiFaq--IsZXpwrJEHBOPQ06x8_Hg2UaszT08A_p-cJ_8ZDf7NN6NbXdKUhRaE4gI0uuXyFZqxJZkDcFUypDYj0Asptq8UoQzkmXQywvVfQopojBR-8nn3OMOKONrsHyH1BmCoMLMpbPhKVbHPlZTrG2lhl6tsJJQtpyePr0tc"/>
+</div>
+<!-- Thumbnail Gallery -->
+<div class="grid grid-cols-4 gap-3 lg:gap-4">
+<button class="thumbnail-btn relative aspect-[4/5] bg-surface-container rounded-DEFAULT overflow-hidden shadow-sm transition-all outline-none" data-img-idx="0" onclick="swapThumb(0)" type="button">
+<img class="w-full h-full object-cover" data-alt="Lit amber glass candle radiating amber glow on a minimalist stone bedside table beside an open linen journal and soft linen curtains in twilight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCda_Q8mu6f9LGZhlRiSxoEP7iV4lE3sgLiwCh8ZLqVIOAyjGo8HMFwBFVpiFmjevCEzA2vw5YcBBgzzJnb7qCUZTrPUNmXeT8qgNU2Fo-vg7KRfRUc2km2BRL8p-4zSNKWQ_WrjLGj2bQTIEzI8XZ-Thdq7MYknBc4gNjQ5bBGK7J4ng4RuX2AN36K11jfOn6Bx8BYM2kGj5Th3k_U-WHsT0QjMSW7spok2-ize7tx"/>
+<div class="thumb-overlay absolute inset-0 bg-secondary-container/20"></div>
+</button>
+<button class="thumbnail-btn relative aspect-[4/5] bg-surface-container rounded-DEFAULT overflow-hidden shadow-sm transition-all outline-none" data-img-idx="1" onclick="swapThumb(1)" type="button">
+<img class="w-full h-full object-cover" data-alt="Top down overhead flatlay of pure botanical soy candle showcasing natural crackling wooden wick, unburnt ivory soy wax, and smooth grain textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvtzBBTbtWDMTVoI0FI0P_2H197peGA9j_lD1Su86sPJ-WCbZ6K14vN8vSYqVouZZ6pNiK5Kh8InSKCzRsvX8Mw1vhS6i6glAxb7LXgOJd98GgpA52DBzkcDyZqxYciJAp2JEOzrAcl4m3VvtCYXFyOKwiWKU3a_oMSONmvGi69Vzx8GFldawrgh2QYz-geEXDRqZRqxVlh297HpLOkgmJ88wBJZGleD8LNRk_ILye"/>
+<div class="thumb-overlay absolute inset-0 bg-transparent hover:bg-surface-variant/30"></div>
+</button>
+<button class="thumbnail-btn relative aspect-[4/5] bg-surface-container rounded-DEFAULT overflow-hidden shadow-sm transition-all outline-none" data-img-idx="2" onclick="swapThumb(2)" type="button">
+<img class="w-full h-full object-cover" data-alt="Lueur and Co luxury rigid embossed gift unboxing packaging with wax seal, dried botanical sprigs, and cotton pouch packaging." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrIENIajzne3jS1F_KOVmwqsnwVPYXJc-Z9rg3l24l98St59FXAITLhV4IqBIyWgsi_AGEuJ1eZo7atmXj2c5r-jzK0nmnU_v6tuAMZ1AgApGneomI1-oAx7FCl2oukaE-sOJ2RM2Rw9LdFRxmd8lkeQvF0N5mEj2r_Wiv3QpRtbWWwHs6_DYjGBcLiOxOc9f6pPUkgT6FQ25IZGYjV_b98hCO4p4MWmMubBExoWYT"/>
+<div class="thumb-overlay absolute inset-0 bg-transparent hover:bg-surface-variant/30"></div>
+</button>
+<button class="thumbnail-btn relative aspect-[4/5] bg-surface-container rounded-DEFAULT overflow-hidden shadow-sm transition-all outline-none" data-img-idx="3" onclick="swapThumb(3)" type="button">
+<img class="w-full h-full object-cover" data-alt="Raw raw organic ingredients macro shot featuring raw pure sandalwood bark chips, golden amber crystals, and fresh green cardamom pods on handmade paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6gKxhZn0pJs8YNzTdyq0dbMQ33WqL_bKvb5BAKqHoG6Rhsg2Xcj8WZlP4wygTkV-TnuTDPl-vbFncsXFHg2jGqgVTxzeBux_pE4hL8FyqfY9IJVXne4bCuafXcSEoMYgp8WbwXnJHhpngey_QDQKj0rdqg-d49vVFNdqSpGL9XglUAzRtD4BAmTP_PjLlY85F4LP9WHWsnjZosZLiBTgEndH5ioBwHa-0JWmt6j5T"/>
+<div class="thumb-overlay absolute inset-0 bg-transparent hover:bg-surface-variant/30"></div>
+</button>
+</div>
+</div>
+<!-- Right Column: Product Information & Checkout Panel -->
+<div class="lg:col-span-5 flex flex-col space-y-6">
+<!-- Batch & Series -->
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container text-secondary text-[11px] font-semibold tracking-widest uppercase rounded-DEFAULT">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+            Atelier Limited Pour — Batch No. 042
+          </span>
+<span class="text-[11px] uppercase tracking-wider text-on-surface-variant font-medium">Harvest 2024</span>
+</div>
+<!-- Title & Tagline -->
+<div class="space-y-2">
+<h1 class="font-display-hero text-3xl lg:text-4xl text-on-surface font-normal leading-tight">
+            Sandalwood Luxury Candle
+          </h1>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">
+            Deep Mysore Sandalwood, Smoked Cedar &amp; Warm Amber Resin
+          </p>
+</div>
+<!-- Rating & Reviews Bar -->
+<div class="flex items-center gap-3 pt-1 text-xs">
+<div class="flex items-center text-secondary-container">
+<span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-semibold text-on-surface tracking-tight">4.9</span>
+<a class="text-on-surface-variant hover:text-on-surface underline underline-offset-4 decoration-secondary-container transition-colors" href="#reviews-section">
+            (88 Verified Reviews)
+          </a>
+<span class="text-surface-variant">•</span>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1" onclick="document.getElementById('question-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[14px]">chat_bubble_outline</span>
+            Ask a question
+          </button>
+</div>
+<!-- Pricing Block -->
+<div class="bg-surface-container-low p-5 rounded-DEFAULT shadow-sm space-y-2">
+<div class="flex items-baseline gap-3">
+<span class="text-3xl font-display-hero text-on-surface font-semibold tracking-tight" id="display-price">₹699</span>
+<span class="text-base text-on-surface-variant line-through font-light" id="original-price">₹899</span>
+<span class="text-xs px-2 py-0.5 rounded-DEFAULT bg-secondary-container text-on-secondary-container font-semibold tracking-wider uppercase">
+              22% OFF
+            </span>
+</div>
+<p class="text-[11px] text-on-surface-variant tracking-wide">
+            Inclusive of all taxes. Free shipping on orders over ₹1,499.
+          </p>
+</div>
+<!-- Size & Vessel Selector -->
+<div class="space-y-2.5 pt-2">
+<div class="flex items-center justify-between text-xs">
+<span class="uppercase tracking-widest font-semibold text-on-surface">Size &amp; Vessel:</span>
+<span class="text-secondary font-medium" id="selected-size-label">220g Amber Glass (55 hrs burn)</span>
+</div>
+<div class="grid grid-cols-3 gap-2.5" id="size-options">
+<button class="size-btn p-3 rounded-DEFAULT text-left bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all" onclick="selectSize(this, 699, 899, '220g Amber Glass (55 hrs burn)', 55)" type="button">
+<span class="text-xs font-semibold text-on-surface">220g Amber</span>
+<span class="text-[11px] text-on-surface-variant mt-1">~55 hrs burn</span>
+<span class="text-xs font-medium text-secondary mt-2">₹699</span>
+</button>
+<button class="size-btn p-3 rounded-DEFAULT text-left bg-surface-container text-on-surface shadow-sm flex flex-col justify-between transition-all opacity-80 hover:opacity-100" onclick="selectSize(this, 1099, 1399, '350g Ceramic Tumbler (85 hrs burn)', 85)" type="button">
+<span class="text-xs font-semibold text-on-surface">350g Ceramic</span>
+<span class="text-[11px] text-on-surface-variant mt-1">~85 hrs burn</span>
+<span class="text-xs font-medium text-secondary mt-2">₹1,099</span>
+</button>
+<button class="size-btn p-3 rounded-DEFAULT text-left bg-surface-container text-on-surface shadow-sm flex flex-col justify-between transition-all opacity-80 hover:opacity-100" onclick="selectSize(this, 349, 449, '80g Travel Tin (20 hrs burn)', 20)" type="button">
+<span class="text-xs font-semibold text-on-surface">80g Travel</span>
+<span class="text-[11px] text-on-surface-variant mt-1">~20 hrs burn</span>
+<span class="text-xs font-medium text-secondary mt-2">₹349</span>
+</button>
+</div>
+</div>
+<!-- Wick Selector -->
+<div class="space-y-2.5 pt-1">
+<div class="flex items-center justify-between text-xs">
+<span class="uppercase tracking-widest font-semibold text-on-surface">Wick Selection:</span>
+<span class="text-[11px] text-on-surface-variant">Sustainably harvested wood or unbleached cotton</span>
+</div>
+<div class="grid grid-cols-2 gap-3" id="wick-options">
+<button class="wick-btn p-3 rounded-DEFAULT text-left bg-surface-container-lowest shadow-sm flex items-center justify-between transition-all" onclick="selectWick(this, 0)" type="button">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-on-surface">Egyptian Cotton</span>
+<span class="text-[10px] text-on-surface-variant">Silent, steady radiant glow</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">radio_button_checked</span>
+</button>
+<button class="wick-btn p-3 rounded-DEFAULT text-left bg-surface-container shadow-sm flex items-center justify-between transition-all opacity-80 hover:opacity-100" onclick="selectWick(this, 50)" type="button">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-on-surface">Crackling Wood</span>
+<span class="text-[10px] text-on-surface-variant">Fireplace sound (+₹50)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">radio_button_unchecked</span>
+</button>
+</div>
+</div>
+<!-- Quantity & Stock Status -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center bg-surface-container rounded-DEFAULT p-1">
+<button aria-label="Decrease quantity" class="w-8 h-8 rounded-DEFAULT bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-variant transition-colors shadow-sm" onclick="adjustQty(-1)" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-10 text-center text-xs font-semibold text-on-surface" id="qty-val">1</span>
+<button aria-label="Increase quantity" class="w-8 h-8 rounded-DEFAULT bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-variant transition-colors shadow-sm" onclick="adjustQty(1)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+<span class="text-secondary font-medium tracking-wide">In Stock — 14 units left in this pour</span>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="space-y-3 pt-2">
+<button class="w-full py-4 px-6 bg-[#FAB507] hover:bg-secondary-fixed-dim text-[#1c1c18] font-semibold text-xs uppercase tracking-[0.2em] rounded-DEFAULT shadow-md flex items-center justify-center gap-3 transition-transform active:scale-[0.99]" id="add-to-bag-btn" onclick="addToCartTrigger()" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span id="cta-label">ADD TO BAG — ₹699</span>
+</button>
+<div class="flex items-center gap-3">
+<button class="flex-1 py-3.5 px-4 bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-medium text-xs uppercase tracking-[0.18em] rounded-DEFAULT shadow-sm transition-colors text-center" onclick="window.location.href='#checkout'" type="button">
+              BUY IT NOW
+            </button>
+<button aria-label="Add to Wishlist" class="w-12 h-11 bg-surface-container hover:bg-surface-container-high rounded-DEFAULT flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm" onclick="toggleWishlist(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<button aria-label="Share product" class="w-12 h-11 bg-surface-container hover:bg-surface-container-high rounded-DEFAULT flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors shadow-sm" onclick="shareProduct()" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Value Badges -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2 pt-4">
+<div class="p-3 bg-surface-container-low rounded-DEFAULT text-center shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mb-1">schedule</span>
+<p class="text-[11px] font-semibold text-on-surface leading-tight">55+ Hours</p>
+<p class="text-[10px] text-on-surface-variant">Clean Slow Burn</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-DEFAULT text-center shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mb-1">spa</span>
+<p class="text-[11px] font-semibold text-on-surface leading-tight">100% Botanical</p>
+<p class="text-[10px] text-on-surface-variant">Pure Soy Wax</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-DEFAULT text-center shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mb-1">verified_user</span>
+<p class="text-[11px] font-semibold text-on-surface leading-tight">Zero Toxins</p>
+<p class="text-[10px] text-on-surface-variant">Paraben &amp; Phthalate Free</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-DEFAULT text-center shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mb-1">workspace_premium</span>
+<p class="text-[11px] font-semibold text-on-surface leading-tight">IFRA Certified</p>
+<p class="text-[10px] text-on-surface-variant">Global Safety Standard</p>
+</div>
+</div>
+<!-- Pincode Delivery Estimator -->
+<div class="p-4 bg-surface-container rounded-DEFAULT space-y-2 shadow-sm">
+<div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">local_shipping</span>
+            Delivery Availability &amp; Transit
+          </div>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-container-lowest px-3 py-2 text-xs text-on-surface placeholder:text-on-surface-variant/60 rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-secondary-container shadow-inner" id="pincode-input" maxlength="6" placeholder="Enter 6-digit Pincode" type="text"/>
+<button class="px-4 py-2 bg-on-surface text-surface text-xs font-medium uppercase tracking-wider rounded-DEFAULT hover:bg-inverse-surface transition-colors shadow-sm" onclick="checkPincode()" type="button">
+              Check Date
+            </button>
+</div>
+<div class="text-[11px] text-on-surface-variant hidden" id="pincode-result"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Olfactory & Specification Tabs -->
+<section class="w-full bg-surface-container-low py-16 shadow-sm">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<!-- Tab Headers -->
+<div class="flex flex-wrap items-center justify-center gap-3 md:gap-8 pb-10">
+<button class="spec-tab-btn px-5 py-2.5 text-xs uppercase tracking-widest font-semibold text-on-surface bg-surface-container-lowest shadow-sm rounded-DEFAULT transition-all" onclick="switchSpecTab('scent-pyramid', this)" type="button">
+          Fragrance Notes Breakdown
+        </button>
+<button class="spec-tab-btn px-5 py-2.5 text-xs uppercase tracking-widest font-medium text-on-surface-variant hover:text-on-surface bg-transparent rounded-DEFAULT transition-all" onclick="switchSpecTab('ritual-care', this)" type="button">
+          Candle Care &amp; Rituals
+        </button>
+<button class="spec-tab-btn px-5 py-2.5 text-xs uppercase tracking-widest font-medium text-on-surface-variant hover:text-on-surface bg-transparent rounded-DEFAULT transition-all" onclick="switchSpecTab('sustainability', this)" type="button">
+          Sustainability &amp; Ingredients
+        </button>
+</div>
+<!-- Tab 1: Scent Pyramid -->
+<div class="spec-tab-pane grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="tab-scent-pyramid">
+<div class="lg:col-span-5 relative aspect-square rounded-DEFAULT overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close up artistic still life of aged raw sandalwood log alongside delicate violet leaves and whole bergamot fruit on raw linen cloth with gentle warm candlelight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu6nVfy5nl-U6SoDXQ8X05KrzRLOQDu2gd_uSb7imyb6vJ04XuYLHF3dN39upUYkNaqtlMMmglYVlu6C1-IF1OjEgUOjbOyFgribf8ahYB1hSpeu_Eu7oM7XwAHMZVWVoqWIi6IBX_GexPE_DU_9rZFMhHIxDPT_Ia-XzCVcCtHNx-5wvq2HKS_Kj9vZ4tLMFCkX7-46dEckVSTxL2jx9TtsDJ8NS9a7nzDAs6b4Ei"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/50 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-surface">
+<p class="text-[10px] uppercase tracking-widest font-medium opacity-80">Olfactory Profile</p>
+<p class="font-display-hero text-xl italic font-normal">Woody • Balsamic • Meditative</p>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-6">
+<div class="space-y-2">
+<h3 class="font-display-hero text-2xl text-on-surface">The Olfactory Architecture</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+              Constructed in homage to centuries-old sacred wood rituals, this sensory composition develops in three delicate tiers, releasing slow balsamic warmth that grounds the spirit.
+            </p>
+</div>
+<!-- Note Levels -->
+<div class="space-y-4">
+<!-- Top -->
+<div class="bg-surface-container p-4 rounded-DEFAULT shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div>
+<span class="text-[10px] uppercase tracking-widest font-bold text-secondary">Top Notes (0 — 15 Mins)</span>
+<p class="text-sm font-semibold text-on-surface mt-0.5">Crisp Cardamom • Italian Bergamot</p>
+</div>
+<span class="text-[11px] text-on-surface-variant italic">Awakens the room with a sparkling aromatic opening</span>
+</div>
+<!-- Heart -->
+<div class="bg-surface-container p-4 rounded-DEFAULT shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div>
+<span class="text-[10px] uppercase tracking-widest font-bold text-secondary">Heart Notes (15 — 60 Mins)</span>
+<p class="text-sm font-semibold text-on-surface mt-0.5">Tuscan Iris • Violet Leaf • Smoked Cedar</p>
+</div>
+<span class="text-[11px] text-on-surface-variant italic">Velvety powdered florals married with timber smoke</span>
+</div>
+<!-- Base -->
+<div class="bg-surface-container p-4 rounded-DEFAULT shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div>
+<span class="text-[10px] uppercase tracking-widest font-bold text-secondary">Base Notes (4+ Hours Lingering)</span>
+<p class="text-sm font-semibold text-on-surface mt-0.5">Aged Mysore Sandalwood • Amber Resin • Soft Musk</p>
+</div>
+<span class="text-[11px] text-on-surface-variant italic">Rich golden resinous warmth that settles deeply</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab 2: Ritual Care -->
+<div class="spec-tab-pane hidden grid grid-cols-1 md:grid-cols-3 gap-6" id="tab-ritual-care">
+<div class="p-6 bg-surface-container rounded-DEFAULT shadow-sm space-y-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-secondary-container/20 flex items-center justify-center text-secondary font-display-hero text-lg font-bold">
+            01
+          </div>
+<h4 class="font-display-hero text-lg text-on-surface">The Memory Burn</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Allow your candle to burn for at least 2 to 3 hours on its first lighting until the wax melt pool reaches all outer glass edges. This locks the memory and eliminates tunneling permanently.
+          </p>
+</div>
+<div class="p-6 bg-surface-container rounded-DEFAULT shadow-sm space-y-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-secondary-container/20 flex items-center justify-center text-secondary font-display-hero text-lg font-bold">
+            02
+          </div>
+<h4 class="font-display-hero text-lg text-on-surface">Trim to 1/4 Inch</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Always pinch off charred wood tips or trim cotton wicks to 5mm prior to every single burn session. A neat wick ensures a steady flame, maximum fragrance throw, and clean soot-free glass.
+          </p>
+</div>
+<div class="p-6 bg-surface-container rounded-DEFAULT shadow-sm space-y-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-secondary-container/20 flex items-center justify-center text-secondary font-display-hero text-lg font-bold">
+            03
+          </div>
+<h4 class="font-display-hero text-lg text-on-surface">Safe Sanctuary</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Burn on heat-resistant surfaces away from drafts, pets, and children. Extinguish after 4 consecutive hours using a metal snuffer or lid to preserve the delicate aroma and prevent smoldering.
+          </p>
+</div>
+</div>
+<!-- Tab 3: Sustainability -->
+<div class="spec-tab-pane hidden grid grid-cols-1 lg:grid-cols-2 gap-8 items-center" id="tab-sustainability">
+<div class="space-y-4">
+<h3 class="font-display-hero text-2xl text-on-surface">Conscious Botanicals &amp; Atelier Ethics</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Our candles represent an uncompromising standard of purity. Every vessel is hand-poured in micro-batches of only 40 units at our Pondicherry workshop using renewable agricultural soy.
+          </p>
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div class="p-4 bg-surface-container rounded-DEFAULT shadow-sm space-y-1">
+<span class="text-xs font-semibold text-on-surface">100% Non-GMO Soy</span>
+<p class="text-[11px] text-on-surface-variant">Biodegradable, completely paraffin-free wax harvested ethically.</p>
+</div>
+<div class="p-4 bg-surface-container rounded-DEFAULT shadow-sm space-y-1">
+<span class="text-xs font-semibold text-on-surface">Phthalate-Free Essences</span>
+<p class="text-[11px] text-on-surface-variant">Blended with therapeutic pure botanical essential oils.</p>
+</div>
+<div class="p-4 bg-surface-container rounded-DEFAULT shadow-sm space-y-1">
+<span class="text-xs font-semibold text-on-surface">Upcyclable Vessels</span>
+<p class="text-[11px] text-on-surface-variant">Apothecary glass designed to be reused as brush cups or planters.</p>
+</div>
+<div class="p-4 bg-surface-container rounded-DEFAULT shadow-sm space-y-1">
+<span class="text-xs font-semibold text-on-surface">Untreated FSC Wood</span>
+<p class="text-[11px] text-on-surface-variant">Crackling wood wicks gathered from sustainable North American forests.</p>
+</div>
+</div>
+</div>
+<div class="relative aspect-[16/10] rounded-DEFAULT overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Artisan hands gently pouring creamy liquid ivory soy wax into amber glass vessels in a tranquil, sunlit studio with copper measuring jugs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJI1onPukZLNxJYz0a5-XHGh1dXxx9lTEgzzmAUHKc5EKT3VpbwL_UoLLC-eRwGpRf0md7FTGENEB7nCQm_nQe-8znvY-FwEKJpjKuIOtgfeWRsc4zRsg7aDscznQCZkXzXZBDWOpRg5M3NQkgd_KetyQ-vViipIYiI_o0akIFc6OjoKElj0NCAG9ydZIEZR51DEKfQTyuMEVWKxPwCdLil6zudeLB_6V3Dop9fVoZ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Paired Together / Often Bought With Module -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div class="space-y-1">
+<span class="text-[11px] uppercase tracking-[0.2em] font-semibold text-secondary">Complete The Ceremony</span>
+<h2 class="font-display-hero text-2xl lg:text-3xl text-on-surface font-normal">Often Paired Together</h2>
+</div>
+<p class="text-xs text-on-surface-variant max-w-md">
+        Curated tools designed to elevate your everyday olfactory rituals and extend the lifespan of your candles.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Pair 1: Solid Brass Trimmer -->
+<div class="bg-surface-container-low p-5 rounded-DEFAULT shadow-sm flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="relative aspect-square bg-surface-container rounded-DEFAULT overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Matte brushed solid brass wick trimmer resting on textured handwoven raw linen cloth next to an extinguished candle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhEwQQClQeNzpBAN98ZfK-cnaFvcyCqoTtIWex3hSKu_Bj119LEW7Tiy6sGCG9ZywR-EGqw62hPmlcOz648dTjUJ7FytKMaYReYISD1p3hyxKPRn1X04FOY-VrOYdChL5TwsFphraJpmw7eywwEWkjjMOz8KkSiAy9BP-5M83Olh7hhnDZCi0uluMaXpytaQxISqppr4Y5JXpWKU_O-UlmxHGVXYAhiFhPM5_z-Yg_"/>
+<span class="absolute top-3 left-3 bg-surface/90 text-[10px] tracking-wider uppercase font-semibold text-on-surface px-2.5 py-1 rounded-DEFAULT shadow-sm">
+              Ritual Essential
+            </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-display-hero text-base text-on-surface">Antique Brass Wick Trimmer</h3>
+<p class="text-[11px] text-on-surface-variant">Prevents soot buildup and catches charred wick cuttings cleanly.</p>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between border-t-0">
+<div>
+<span class="text-sm font-semibold text-on-surface">₹299</span>
+<span class="text-xs text-on-surface-variant line-through ml-1.5">₹399</span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container-highest hover:bg-secondary-container hover:text-on-secondary-container text-on-surface text-[11px] font-semibold tracking-wider uppercase rounded-DEFAULT shadow-sm transition-colors flex items-center gap-1.5" onclick="quickAddPair(this, 'Antique Brass Wick Trimmer', 299)" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+            Add Together
+          </button>
+</div>
+</div>
+<!-- Pair 2: Apothecary Match Bottle -->
+<div class="bg-surface-container-low p-5 rounded-DEFAULT shadow-sm flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="relative aspect-square bg-surface-container rounded-DEFAULT overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Glass apothecary match cloche bottle with cork stopper filled with 60 long stem black tipped matchsticks and match striker pad." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYjWoy4swfF6yo8l4HHvUc6bBgFubBnCB_whi6_Tj_0rVA2YUEAzRWtO3eVo8CZVbFS7d7EDRf3V8jz0G3zdbZANSOojvSBV4oKNz5qDQBojrsh9UeQFPoDb_8KatBg86GnGzoVDgoFs4VkuJ-IE31Zafvg0xEWo9kjmSVkTqrzlbdy1TGLIf6ymUexPzdqHKgP9jWB1WnjjaYrRwey12hc7OqGmN3CiUioKwLStpz"/>
+<span class="absolute top-3 left-3 bg-surface/90 text-[10px] tracking-wider uppercase font-semibold text-on-surface px-2.5 py-1 rounded-DEFAULT shadow-sm">
+              60 Long Stems
+            </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-display-hero text-base text-on-surface">Apothecary Match Cloche</h3>
+<p class="text-[11px] text-on-surface-variant">Flint striker on bottle base with extended safety wooden stems.</p>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="text-sm font-semibold text-on-surface">₹199</span>
+<span class="text-xs text-on-surface-variant line-through ml-1.5">₹249</span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container-highest hover:bg-secondary-container hover:text-on-secondary-container text-on-surface text-[11px] font-semibold tracking-wider uppercase rounded-DEFAULT shadow-sm transition-colors flex items-center gap-1.5" onclick="quickAddPair(this, 'Apothecary Match Cloche', 199)" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+            Add Together
+          </button>
+</div>
+</div>
+<!-- Pair 3: Ceramic Snuffer & Bell -->
+<div class="bg-surface-container-low p-5 rounded-DEFAULT shadow-sm flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="relative aspect-square bg-surface-container rounded-DEFAULT overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist glazed speckled stoneware ceramic bell candle snuffer with wooden handle resting on travertine slab." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzqT0SWrFgMziPrL7SdV71EMHjPIJGeykKKuCaXYRVOaWHKW8xPweIsAfb5DCOrFp8XXji99ToxSh6RpI_5Ss7Ci1hdSmomYdJK5tlXJHnAnryGnexx71M8XjPtDPZhO88BLchDhoH_9qbHOjibkyF6qiWe1uTF-6qGsZ_gkxpv_pI3VvmlpgA-22oal_bTB4I4rDWoSM1lkygR9c80NSnyJGA6M4hiyCPWHFP5-TS"/>
+<span class="absolute top-3 left-3 bg-surface/90 text-[10px] tracking-wider uppercase font-semibold text-on-surface px-2.5 py-1 rounded-DEFAULT shadow-sm">
+              Artisan Clay
+            </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-display-hero text-base text-on-surface">Stoneware Extinguishing Bell</h3>
+<p class="text-[11px] text-on-surface-variant">Extinguishes flames cleanly without smoke dispersal in quiet rooms.</p>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="text-sm font-semibold text-on-surface">₹349</span>
+<span class="text-xs text-on-surface-variant line-through ml-1.5">₹450</span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container-highest hover:bg-secondary-container hover:text-on-secondary-container text-on-surface text-[11px] font-semibold tracking-wider uppercase rounded-DEFAULT shadow-sm transition-colors flex items-center gap-1.5" onclick="quickAddPair(this, 'Stoneware Extinguishing Bell', 349)" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+            Add Together
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Reviews Section -->
+<section class="w-full bg-surface-container-low py-20 shadow-sm" id="reviews-section">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin space-y-12">
+<!-- Section Header & Rating Breakdown Summary -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-4 space-y-3">
+<span class="text-[11px] uppercase tracking-[0.2em] font-semibold text-secondary">Verified Olfactory Testimonials</span>
+<h2 class="font-display-hero text-3xl text-on-surface">Client Impressions</h2>
+<div class="flex items-baseline gap-3 pt-1">
+<span class="text-5xl font-display-hero text-on-surface font-semibold">4.9</span>
+<div class="space-y-1">
+<div class="flex items-center text-secondary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-xs text-on-surface-variant">Based on 88 verified experiences</p>
+</div>
+</div>
+<div class="pt-3">
+<button class="px-5 py-3 bg-on-surface hover:bg-inverse-surface text-surface text-xs font-semibold uppercase tracking-widest rounded-DEFAULT shadow-sm transition-colors" onclick="document.getElementById('write-review-modal').classList.remove('hidden')" type="button">
+              Write a Review
+            </button>
+</div>
+</div>
+<!-- Rating Progress Rings / Bars Data Visualization -->
+<div class="lg:col-span-8 bg-surface-container p-6 rounded-DEFAULT shadow-sm space-y-3">
+<!-- 5 Stars -->
+<div class="flex items-center gap-4 text-xs">
+<span class="w-12 text-right font-medium text-on-surface">5 Stars</span>
+<div class="flex-1 h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 88%;"></div>
+</div>
+<span class="w-10 text-right text-on-surface-variant font-medium">88%</span>
+</div>
+<!-- 4 Stars -->
+<div class="flex items-center gap-4 text-xs">
+<span class="w-12 text-right font-medium text-on-surface">4 Stars</span>
+<div class="flex-1 h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 9%;"></div>
+</div>
+<span class="w-10 text-right text-on-surface-variant font-medium">9%</span>
+</div>
+<!-- 3 Stars -->
+<div class="flex items-center gap-4 text-xs">
+<span class="w-12 text-right font-medium text-on-surface">3 Stars</span>
+<div class="flex-1 h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 2%;"></div>
+</div>
+<span class="w-10 text-right text-on-surface-variant font-medium">2%</span>
+</div>
+<!-- 2 Stars -->
+<div class="flex items-center gap-4 text-xs">
+<span class="w-12 text-right font-medium text-on-surface">2 Stars</span>
+<div class="flex-1 h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 1%;"></div>
+</div>
+<span class="w-10 text-right text-on-surface-variant font-medium">1%</span>
+</div>
+<!-- 1 Star -->
+<div class="flex items-center gap-4 text-xs">
+<span class="w-12 text-right font-medium text-on-surface">1 Star</span>
+<div class="flex-1 h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 0%;"></div>
+</div>
+<span class="w-10 text-right text-on-surface-variant font-medium">0%</span>
+</div>
+</div>
+</div>
+<!-- Real Review Photographs Showcase -->
+<div class="space-y-3">
+<p class="text-xs uppercase tracking-widest font-semibold text-on-surface">Photos Shared by Patrons (16)</p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<div class="relative aspect-square rounded-DEFAULT overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform" data-alt="Customer photo of lit Sandalwood candle on a dark walnut coffee table beside a book and steaming ceramic tea cup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6cUEoAF17S6KY5IJeLcjaKzxz20W7h99tnlDjui6QYVlG1UgWPEshcmdkVCiE1WQVntwlwTkP8IQrsZxgpo5_iO6HiggtwirlJP3KnadtaiRqBXvlFKr3rcbkpoeannhQCYADcTBfa6YVSZcOp-3cA_y_RV5AR1diAY4DUeDgv9BsjPdRQIFGEstBkn3On73KBYVEpoM6rqd9phac-qQxWzw_mL_IMS_oeLflW9ep"/>
+</div>
+<div class="relative aspect-square rounded-DEFAULT overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform" data-alt="Customer photo showing smooth melt pool of candle with crackling wooden wick lit softly during evening reading hour." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW_W6UutS-TROrN_ub3XmNXDIL52USuoFVbXH9SgcpjoOyXIkzo2dDnSa_mEQq-Ot2gLU1nyoQ_2z0cR--Zt2xrd_FLw0Clmw86pEKxjwV5zYfMourTaGDCQHp8FaeWAuN2xryb9DS3sd6n3--bDMtQAgUwrzSFu-qDKk4oRi23F58_53bzVUlI6dppRPnGsnYCryAY2GU9D7D3Wh3Pc4wFf-fpDLejmFEdaY_FsBd"/>
+</div>
+<div class="relative aspect-square rounded-DEFAULT overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform" data-alt="Customer interior display with amber candle placed in minimalist marble bathroom alongside bath salts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLth6uWnWaSMwCHl2G_aEyv-aIKNo0p4oW0Es7H9WlfvBXC35PNgHwgbJNJCKaJGgnQwf7lLXbOgZBnV7lD2nzYsSM23b_4ikYT_460inqg0J9ynPK3divOFr20CJZqr5KSmoFFsn4jKy8ARS7h7lWLYYGNNj_jZS_fVatp9ukpNIPh39C21x26UPmofTNQaQq2x_sXAJQX1KU1BfY2UTlsZMnjUxdY_Je2FLWrpo1"/>
+</div>
+<div class="relative aspect-square rounded-DEFAULT overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform" data-alt="Customer gift presentation showing the unboxed amber vessel resting on linen gift cloth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm9xVtMJoRg5uaQvF4_wumQRA5qKvt0M6NNQP-pgOwix1nMLYBeV2FzakMRU_-L8CwPZFDMYrD6YT43xs97FkwXKpXMExIK9O0pcDC3NX2XYO794_Eu9fyZjYbLz8xRtWjS7-WcrJxt-jPwLEXg-MlBjlvxPsJDqaiBAMTpicXanBE-vF76M4VCsXa4hKrED8ZUdQc6OIJ55JfAxf86jPKxdG5L0pSR0qdJxtJaajq"/>
+</div>
+</div>
+</div>
+<!-- Individual Reviews Feed -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+<!-- Review 1 -->
+<div class="bg-surface-container p-6 rounded-DEFAULT shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] text-on-surface-variant">2 days ago</span>
+</div>
+<h4 class="font-display-hero text-base text-on-surface font-semibold leading-snug">
+              “An extraordinary meditation companion.”
+            </h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+              The Mysore sandalwood is authentic and deep—none of the synthetic vanilla sweetness found in mainstream candles. The crackling wooden wick sounds like a tiny hearth in my reading studio.
+            </p>
+</div>
+<div class="pt-2 border-t-0 flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface">Ananya K. — Bangalore</span>
+<span class="text-[10px] uppercase tracking-wider text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Buyer
+            </span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container p-6 rounded-DEFAULT shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] text-on-surface-variant">1 week ago</span>
+</div>
+<h4 class="font-display-hero text-base text-on-surface font-semibold leading-snug">
+              “Clean even burn right to the edges.”
+            </h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+              I followed the first-burn ritual instructions and the wax has burned totally flat without any waste on the sides. The amber jar is sturdy and glows with such calm warmth in dim light.
+            </p>
+</div>
+<div class="pt-2 border-t-0 flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface">Vikramaditya S. — Mumbai</span>
+<span class="text-[10px] uppercase tracking-wider text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Buyer
+            </span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container p-6 rounded-DEFAULT shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] text-on-surface-variant">2 weeks ago</span>
+</div>
+<h4 class="font-display-hero text-base text-on-surface font-semibold leading-snug">
+              “Subtle yet pervasive fragrance throw.”
+            </h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+              Usually scented candles give me mild headaches, but Lueur's pure botanical soy formulation is so clean. The smoked cedar and iris notes make the sandalwood linger gracefully for hours.
+            </p>
+</div>
+<div class="pt-2 border-t-0 flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface">Rhea N. — New Delhi</span>
+<span class="text-[10px] uppercase tracking-wider text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Buyer
+            </span>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="text-center pt-4">
+<button class="px-6 py-3 bg-surface-container-highest hover:bg-surface-variant text-on-surface text-xs font-semibold tracking-widest uppercase rounded-DEFAULT shadow-sm transition-colors" type="button">
+          View All 88 Reviews
+        </button>
+</div>
+</div>
+</section>
+<!-- Interactive Slide-In / Notification Toast (Hidden by default) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none bg-surface-container-lowest p-4 rounded-DEFAULT shadow-xl flex items-center gap-4 border-l-4 border-secondary-container" id="cart-toast">
+<div class="w-10 h-10 rounded-DEFAULT bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-on-surface">Added to your sensory bag</span>
+<span class="text-[11px] text-on-surface-variant" id="toast-item-desc">Sandalwood Luxury Candle (220g)</span>
+</div>
+<a class="ml-2 px-3 py-1.5 bg-[#FAB507] text-[#1c1c18] text-[10px] font-semibold tracking-wider uppercase rounded-DEFAULT hover:opacity-90" data-path="shopping-cart" href="#">
+      View Bag
+    </a>
+</div>
+<!-- Interactive Question Modal -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="question-modal">
+<div class="bg-surface-container-lowest max-w-md w-full p-6 rounded-DEFAULT shadow-xl space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-display-hero text-lg text-on-surface">Ask Our Perfumer</h3>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('question-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="text-xs text-on-surface-variant">Have questions regarding room scent throw, botanical ingredients, or personalized gifting?</p>
+<div class="space-y-3">
+<input class="w-full bg-surface-container px-3.5 py-2 text-xs text-on-surface rounded-DEFAULT focus:outline-none" placeholder="Your Name" type="text"/>
+<input class="w-full bg-surface-container px-3.5 py-2 text-xs text-on-surface rounded-DEFAULT focus:outline-none" placeholder="Your Email Address" type="email"/>
+<textarea class="w-full bg-surface-container px-3.5 py-2 text-xs text-on-surface rounded-DEFAULT focus:outline-none" placeholder="What would you like to know about Batch 042?" rows="3"></textarea>
+</div>
+<div class="flex justify-end gap-2 pt-2">
+<button class="px-4 py-2 text-xs font-medium uppercase tracking-wider text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('question-modal').classList.add('hidden')" type="button">Cancel</button>
+<button class="px-5 py-2 bg-on-surface text-surface text-xs font-semibold uppercase tracking-wider rounded-DEFAULT shadow-sm" onclick="submitInquiry()" type="button">Submit Question</button>
+</div>
+</div>
+</div>
+<!-- Interactive Write Review Modal -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="write-review-modal">
+<div class="bg-surface-container-lowest max-w-lg w-full p-6 rounded-DEFAULT shadow-xl space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-display-hero text-lg text-on-surface">Share Your Scent Experience</h3>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('write-review-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-3">
+<div>
+<label class="block text-[11px] uppercase tracking-wider font-semibold text-on-surface mb-1">Overall Rating</label>
+<div class="flex items-center gap-1 text-secondary-container cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">star</span>
+<span class="material-symbols-outlined text-[24px]">star</span>
+<span class="material-symbols-outlined text-[24px]">star</span>
+<span class="material-symbols-outlined text-[24px]">star</span>
+<span class="material-symbols-outlined text-[24px]">star</span>
+</div>
+</div>
+<input class="w-full bg-surface-container px-3.5 py-2 text-xs text-on-surface rounded-DEFAULT focus:outline-none" placeholder="Headline / Summary (e.g. Magnificent Mysore aroma)" type="text"/>
+<textarea class="w-full bg-surface-container px-3.5 py-2 text-xs text-on-surface rounded-DEFAULT focus:outline-none" placeholder="Describe the burn quality, fragrance strength, and ambiance created..." rows="3"></textarea>
+<div class="grid grid-cols-2 gap-3">
+<input class="w-full bg-surface-container px-3.5 py-2 text-xs text-on-surface rounded-DEFAULT focus:outline-none" placeholder="Your Name" type="text"/>
+<input class="w-full bg-surface-container px-3.5 py-2 text-xs text-on-surface rounded-DEFAULT focus:outline-none" placeholder="City (e.g. Mumbai)" type="text"/>
+</div>
+</div>
+<div class="flex justify-end gap-2 pt-2">
+<button class="px-4 py-2 text-xs font-medium uppercase tracking-wider text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('write-review-modal').classList.add('hidden')" type="button">Cancel</button>
+<button class="px-5 py-2 bg-[#FAB507] text-[#1c1c18] text-xs font-semibold uppercase tracking-wider rounded-DEFAULT shadow-sm" onclick="submitReview()" type="button">Post Review</button>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interaction Script -->
+<script>
+    let currentBasePrice = 699;
+    let currentOriginalPrice = 899;
+    let wickExtra = 0;
+    let currentQty = 1;
+    let currentSizeTitle = '220g Amber Glass (55 hrs burn)';
+
+    function updatePriceDisplay() {
+      const unitPrice = currentBasePrice + wickExtra;
+      const total = unitPrice * currentQty;
+      const originalTotal = (currentOriginalPrice + wickExtra) * currentQty;
+      
+      const displayElem = document.getElementById('display-price');
+      const origElem = document.getElementById('original-price');
+      const ctaElem = document.getElementById('cta-label');
+
+      if (displayElem) displayElem.innerText = '₹' + total.toLocaleString('en-IN');
+      if (origElem) origElem.innerText = '₹' + originalTotal.toLocaleString('en-IN');
+      if (ctaElem) ctaElem.innerText = 'ADD TO BAG — ₹' + total.toLocaleString('en-IN');
+    }
+
+    function selectSize(btn, price, orig, label) {
+      currentBasePrice = price;
+      currentOriginalPrice = orig;
+      currentSizeTitle = label;
+
+      document.querySelectorAll('#size-options .size-btn').forEach(b => {
+        b.classList.remove('bg-surface-container-lowest', 'opacity-100');
+        b.classList.add('bg-surface-container', 'opacity-80');
+      });
+      btn.classList.add('bg-surface-container-lowest', 'opacity-100');
+      btn.classList.remove('bg-surface-container', 'opacity-80');
+
+      const sizeLabel = document.getElementById('selected-size-label');
+      if (sizeLabel) sizeLabel.innerText = label;
+
+      updatePriceDisplay();
+    }
+
+    function selectWick(btn, surcharge) {
+      wickExtra = surcharge;
+      document.querySelectorAll('#wick-options .wick-btn').forEach(b => {
+        b.classList.remove('bg-surface-container-lowest', 'opacity-100');
+        b.classList.add('bg-surface-container', 'opacity-80');
+        const icon = b.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.innerText = 'radio_button_unchecked';
+          icon.classList.remove('text-secondary');
+          icon.classList.add('text-on-surface-variant');
+        }
+      });
+
+      btn.classList.add('bg-surface-container-lowest', 'opacity-100');
+      btn.classList.remove('bg-surface-container', 'opacity-80');
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.innerText = 'radio_button_checked';
+        icon.classList.add('text-secondary');
+        icon.classList.remove('text-on-surface-variant');
+      }
+
+      updatePriceDisplay();
+    }
+
+    function adjustQty(delta) {
+      currentQty = Math.max(1, currentQty + delta);
+      const qtyElem = document.getElementById('qty-val');
+      if (qtyElem) qtyElem.innerText = currentQty;
+      updatePriceDisplay();
+    }
+
+    function swapThumb(idx) {
+      const thumbs = document.querySelectorAll('.thumbnail-btn');
+      thumbs.forEach((t, i) => {
+        const overlay = t.querySelector('.thumb-overlay');
+        if (i === idx) {
+          if (overlay) overlay.className = 'thumb-overlay absolute inset-0 bg-secondary-container/20';
+        } else {
+          if (overlay) overlay.className = 'thumb-overlay absolute inset-0 bg-transparent hover:bg-surface-variant/30';
+        }
+      });
+    }
+
+    function switchSpecTab(tabId, btn) {
+      document.querySelectorAll('.spec-tab-pane').forEach(pane => {
+        pane.classList.add('hidden');
+      });
+      const target = document.getElementById('tab-' + tabId);
+      if (target) target.classList.remove('hidden');
+
+      document.querySelectorAll('.spec-tab-btn').forEach(b => {
+        b.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold');
+        b.classList.add('bg-transparent', 'text-on-surface-variant', 'font-medium');
+      });
+      btn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold');
+      btn.classList.remove('bg-transparent', 'text-on-surface-variant', 'font-medium');
+    }
+
+    function checkPincode() {
+      const input = document.getElementById('pincode-input');
+      const result = document.getElementById('pincode-result');
+      if (!input || !result) return;
+
+      const code = input.value.trim();
+      if (code.length === 6 && /^\d+$/.test(code)) {
+        result.classList.remove('hidden');
+        result.innerHTML = `<span class="text-secondary font-semibold">Standard Delivery:</span> Guaranteed by Friday via Express Artisan Courier. Free shipping applied.`;
+      } else {
+        result.classList.remove('hidden');
+        result.innerHTML = `<span class="text-error font-medium">Please enter a valid 6-digit postal pincode.</span>`;
+      }
+    }
+
+    function addToCartTrigger() {
+      const toast = document.getElementById('cart-toast');
+      const desc = document.getElementById('toast-item-desc');
+      if (!toast) return;
+
+      if (desc) desc.innerText = 'Sandalwood Luxury Candle (' + currentQty + 'x ' + currentSizeTitle.split(' ')[0] + ')';
+      
+      toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+      }, 4000);
+    }
+
+    function quickAddPair(btn, itemName, price) {
+      btn.disabled = true;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[15px]">check</span> Added`;
+      btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+
+      const toast = document.getElementById('cart-toast');
+      const desc = document.getElementById('toast-item-desc');
+      if (toast && desc) {
+        desc.innerText = itemName + ' (₹' + price + ')';
+        toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+        setTimeout(() => {
+          toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+        }, 3500);
+      }
+    }
+
+    function toggleWishlist(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        const isFilled = icon.style.fontVariationSettings?.includes("'FILL' 1");
+        if (isFilled) {
+          icon.style.fontVariationSettings = "'FILL' 0";
+          btn.classList.remove('text-error');
+        } else {
+          icon.style.fontVariationSettings = "'FILL' 1";
+          btn.classList.add('text-error');
+        }
+      }
+    }
+
+    function shareProduct() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Sandalwood Luxury Candle | Lueur & Co.',
+          url: window.location.href
+        }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Product link copied to clipboard.');
+      }
+    }
+
+    function submitInquiry() {
+      alert('Thank you. Our atelier perfumer will review your question and reply within 12 hours.');
+      document.getElementById('question-modal').classList.add('hidden');
+    }
+
+    function submitReview() {
+      alert('Thank you for sharing your experience! Your review has been submitted for verified moderation.');
+      document.getElementById('write-review-modal').classList.add('hidden');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface pt-16 pb-12 shadow-[0_-1px_6px_rgba(45,36,26,0.02)]"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12"><div class="space-y-4"><h3 class="font-display-hero text-xl text-on-surface">Lueur &amp; Co.</h3><p class="text-xs leading-relaxed text-on-surface-variant">Handcrafted slow-burning botanic candles and olfactory sanctuaries poured in micro-batches with pure botanical waxes, sustainably harvested essences, and untreated wooden wicks.</p><p class="text-[11px] uppercase tracking-wider text-secondary font-medium">Atelier: Old Pondicherry • Est. 2021</p></div><div class="space-y-3"><h4 class="text-xs font-semibold uppercase tracking-widest text-on-surface">Quick Links</h4><ul class="space-y-2 text-xs text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="product-listing" href="#">Signature Votive Collection</a></li><li><a class="hover:text-on-surface transition-colors" data-path="collections" href="#">Seasonal Olfactory Library</a></li><li><a class="hover:text-on-surface transition-colors" data-path="home" href="#">Diffuser Refills &amp; Accessories</a></li><li><a class="hover:text-on-surface transition-colors" data-path="about-us" href="#">The Atelier Story</a></li></ul></div><div class="space-y-3"><h4 class="text-xs font-semibold uppercase tracking-widest text-on-surface">Customer Care</h4><ul class="space-y-2 text-xs text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Candle Care &amp; Safety Rituals</a></li><li><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Complimentary Gifting &amp; Notes</a></li><li><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Shipping &amp; Courier Concierge</a></li><li><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Returns &amp; Fragrance Exchange</a></li></ul></div><div class="space-y-4"><h4 class="text-xs font-semibold uppercase tracking-widest text-on-surface">Verified Payments</h4><p class="text-xs text-on-surface-variant leading-relaxed">Encrypted luxury checkout accepting domestic &amp; international tenders.</p><div class="flex flex-wrap items-center gap-2 pt-1"><span class="px-2.5 py-1 text-[11px] font-medium tracking-wide bg-surface-container-lowest text-on-surface rounded-DEFAULT shadow-[0_1px_4px_rgba(0,0,0,0.03)]">UPI</span><span class="px-2.5 py-1 text-[11px] font-medium tracking-wide bg-surface-container-lowest text-on-surface rounded-DEFAULT shadow-[0_1px_4px_rgba(0,0,0,0.03)]">Visa</span><span class="px-2.5 py-1 text-[11px] font-medium tracking-wide bg-surface-container-lowest text-on-surface rounded-DEFAULT shadow-[0_1px_4px_rgba(0,0,0,0.03)]">Mastercard</span><span class="px-2.5 py-1 text-[11px] font-medium tracking-wide bg-surface-container-lowest text-on-surface rounded-DEFAULT shadow-[0_1px_4px_rgba(0,0,0,0.03)]">RuPay</span></div></div></div><div class="pt-8 mt-4 flex flex-col md:flex-row items-center justify-between text-[11px] text-on-surface-variant gap-4"><p>© 2025 Lueur &amp; Co. Artisan Aromatics Atelier. All rights reserved.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Scent Concierge</a></div></div></div></footer></body></html>

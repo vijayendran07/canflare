@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed":"#f6e600","secondary":"#7b5800","on-secondary-fixed":"#261900","tertiary-container":"#f6e9df","on-surface":"#1b1c1a","surface-container-high":"#eae8e4","surface-tint":"#676000","surface-container-lowest":"#ffffff","surface-variant":"#e4e2de","outline":"#7b785f","on-tertiary-container":"#716861","on-surface-variant":"#4a4731","inverse-surface":"#30312e","on-error-container":"#93000a","surface":"#fbf9f5","surface-container-low":"#f5f3ef","tertiary-fixed":"#ede0d7","outline-variant":"#ccc7aa","surface-bright":"#fbf9f5","on-background":"#1b1c1a","surface-dim":"#dbdad6","secondary-fixed-dim":"#ffbb00","primary-container":"#ffef00","on-secondary-container":"#6c4d00","secondary-fixed":"#ffdea4","on-secondary-fixed-variant":"#5d4200","on-primary":"#ffffff","on-tertiary":"#ffffff","background":"#fbf9f5","on-primary-fixed-variant":"#4d4800","error":"#ba1a1a","surface-container-highest":"#e4e2de","surface-container":"#efeeea","secondary-container":"#ffbb00","on-primary-fixed":"#1f1c00","primary-fixed-dim":"#d7ca00","on-secondary":"#ffffff","tertiary":"#665d55","primary":"#676000","on-primary-container":"#736b00","inverse-primary":"#d7ca00","on-error":"#ffffff","tertiary-fixed-dim":"#d0c4bb","inverse-on-surface":"#f2f0ed","error-container":"#ffdad6","on-tertiary-fixed-variant":"#4d453f","on-tertiary-fixed":"#201a15"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"4rem","space-md":"1rem","margin-mobile":"1.25rem","space-lg":"1.75rem","space-xs":"0.25rem","space-xl":"3rem","space-sm":"0.5rem","gutter-mobile":"1rem","gutter":"1.5rem"},"fontFamily":{"display-hero":["Playfair Display"]},"fontSize":{"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-20 px-gutter flex items-center justify-between"><div class="flex flex-col"><span class="font-display-hero text-xl tracking-tight text-on-surface">Lueur &amp; Co.</span><span class="text-[10px] tracking-widest uppercase text-tertiary font-medium">Atelier Aromatics</span></div><span class="px-2 py-0.5 rounded-full bg-surface-container text-[11px] font-medium text-secondary flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>Active</span></div><div class="px-gutter mb-space-sm"><div class="px-space-sm py-2 rounded-lg bg-surface-container flex items-center justify-between"><span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Curing Room</span><span class="text-xs font-semibold text-primary">21.4°C · 48% RH</span></div></div><nav class="flex flex-col px-space-sm gap-space-xs mt-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold rounded-lg shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 transition-all bg-secondary-container text-on-secondary-container font-semibold rounded-lg shadow-sm" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm" data-path="live-orders-and-consignments" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span>Live Orders &amp; Consignments</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm" data-path="olfactory-catalog-and-formulations" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span>Olfactory Catalog</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm" data-path="batch-inventory-and-wax-curing" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Batch Inventory &amp; Curing</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm" data-path="studio-pour-schedules" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Studio Pour Schedules</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm" data-path="customer-connoisseurs" href="#"><span class="material-symbols-outlined text-[20px]">loyalty</span><span>Customer Connoisseurs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm" data-path="analytics-and-revenue" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span>Analytics &amp; Revenue</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm" data-path="atelier-settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Atelier Settings</span></a></nav></div><div class="p-gutter"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="text-[11px] uppercase tracking-wider text-tertiary">Ledger Currency</span><span class="text-sm font-semibold text-on-surface">INR (₹) Domestic</span></div><span class="material-symbols-outlined text-secondary text-[20px]">currency_rupee</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-md"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full bg-surface-container-low pl-10 pr-4 py-2 rounded-lg text-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Lookup batch formula, LOT#, essence, or vessel..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">heat_pump</span></button></div><div class="h-8 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right"><span class="text-xs font-semibold text-on-surface">Eleanor Vance</span><span class="text-[11px] text-tertiary">Master Perfumer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 px-gutter pb-space-xl bg-surface"><div class="flex flex-col w-full space-y-8">
+<!-- Top Atelier Status Banner & Date Range Selector -->
+<section class="bg-surface-container-low rounded-xl p-6 shadow-sm flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary-fixed text-on-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Live Studio Node
+        </span>
+<span class="text-xs uppercase tracking-widest text-tertiary font-medium">Batch Protocol v4.2</span>
+</div>
+<h1 class="font-display-hero text-2xl lg:text-3xl text-on-surface font-normal">
+        Atelier Command &amp; Sensory Intelligence
+      </h1>
+<p class="text-xs text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">location_on</span>
+        Atelier Operations • Old Pondicherry Studio 01 &amp; Bengaluru Logistics Hub
+      </p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<!-- Date Filter Pill Switcher -->
+<div class="bg-surface-container rounded-lg p-1 flex items-center gap-1 text-xs">
+<button class="px-3 py-1.5 rounded-md font-medium text-on-surface-variant hover:text-on-surface transition-colors" onclick="setDateFilter(this, 'today')">Today</button>
+<button class="px-3 py-1.5 rounded-md font-medium text-on-surface-variant hover:text-on-surface transition-colors" onclick="setDateFilter(this, '7d')">Last 7 Days</button>
+<button class="px-3 py-1.5 rounded-md font-semibold bg-surface-container-lowest text-on-surface shadow-xs transition-colors" onclick="setDateFilter(this, 'mtd')">Month to Date</button>
+<button class="px-3 py-1.5 rounded-md font-medium text-on-surface-variant hover:text-on-surface transition-colors" onclick="setDateFilter(this, 'q4')">Harvest Q4</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-medium text-xs flex items-center gap-2 transition-all shadow-xs">
+<span class="material-symbols-outlined text-[17px] text-tertiary">receipt_long</span>
+          Consolidated GST
+        </button>
+<button class="px-4 py-2 rounded-lg font-semibold text-xs tracking-wider uppercase text-on-primary-fixed bg-secondary-container hover:bg-secondary-fixed-dim transition-all shadow-sm flex items-center gap-1.5" onclick="openPourModal()">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+          + New Micro-Batch Pour
+        </button>
+</div>
+</div>
+</section>
+<!-- Executive KPI Summary Cards -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+<!-- Card 1: Gross Revenue -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-[11px] uppercase tracking-wider text-tertiary font-medium">Gross Revenue (MTD)</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-hero text-2xl lg:text-3xl text-on-surface">₹8,42,850</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed text-[11px] font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">trending_up</span> +18.4%
+        </span>
+</div>
+<div class="my-4">
+<!-- SVG Micro-Sparkline Chart -->
+<svg class="w-full h-9 text-secondary" fill="none" viewbox="0 0 200 36">
+<path d="M0,32 C20,30 35,22 55,26 C75,30 90,14 110,18 C130,22 150,8 175,12 C185,13 195,5 200,4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M0,32 L200,4 L200,36 L0,36 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+<div class="pt-3 bg-surface-container-low -mx-5 -mb-5 px-5 py-2.5 flex items-center justify-between text-[11px]">
+<span class="text-on-surface-variant">D2C Store: <strong class="text-on-surface">₹6.1L</strong></span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-on-surface-variant">Reserve Gifting: <strong class="text-on-surface">₹2.3L</strong></span>
+</div>
+</div>
+<!-- Card 2: Active Consignments -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-[11px] uppercase tracking-wider text-tertiary font-medium">Active Consignments</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-hero text-2xl lg:text-3xl text-on-surface">142</span>
+<span class="text-xs text-tertiary font-medium">Orders in Motion</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[19px]">local_shipping</span>
+</div>
+</div>
+<!-- Segmented Bar -->
+<div class="my-4 space-y-1.5">
+<div class="w-full h-2 rounded-full bg-surface-container flex overflow-hidden">
+<div class="bg-secondary h-full" style="width: 27%" title="Pouring: 38"></div>
+<div class="bg-secondary-container h-full" style="width: 32%" title="QC Passed: 46"></div>
+<div class="bg-primary h-full" style="width: 41%" title="Express Transit: 58"></div>
+</div>
+<div class="flex items-center justify-between text-[10px] text-tertiary font-medium">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 38 Curing</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span> 46 QC</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 58 Transit</span>
+</div>
+</div>
+<div class="pt-3 bg-surface-container-low -mx-5 -mb-5 px-5 py-2.5 flex items-center justify-between text-[11px] text-on-surface-variant">
+<span>Carrier SLA: <strong class="text-secondary font-semibold">99.4% On-Time</strong></span>
+<span class="text-[10px] uppercase font-bold text-secondary">Blue Dart Air</span>
+</div>
+</div>
+<!-- Card 3: Soy Wax Stock -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-[11px] uppercase tracking-wider text-tertiary font-medium">Botanical Soy Reserves</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-hero text-2xl lg:text-3xl text-on-surface">420 kg</span>
+<span class="text-xs text-secondary font-semibold">Aged Soy</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[19px]">science</span>
+</div>
+</div>
+<div class="my-4 space-y-1.5">
+<div class="flex justify-between text-xs">
+<span class="text-tertiary">Safety Stock</span>
+<span class="font-semibold text-on-surface">78% Filled • 12 Days</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-700" style="width: 78%"></div>
+</div>
+</div>
+<div class="pt-3 bg-surface-container-low -mx-5 -mb-5 px-5 py-2.5 flex items-center justify-between text-[11px] text-on-surface-variant">
+<span>Next Inbound: <strong class="text-on-surface">250kg on Friday</strong></span>
+<span class="text-primary font-medium">Lot #SOY-41</span>
+</div>
+</div>
+<!-- Card 4: Scent Affinity Rate -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-[11px] uppercase tracking-wider text-tertiary font-medium">Connoisseur Retention</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-hero text-2xl lg:text-3xl text-on-surface">44.2%</span>
+<span class="text-xs text-secondary font-semibold">Repeat Rate</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[19px]">loyalty</span>
+</div>
+</div>
+<div class="my-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">spa</span>
+</div>
+<div class="min-w-0">
+<p class="text-[11px] text-tertiary uppercase tracking-wider truncate font-medium">Signature Note of the Month</p>
+<p class="text-xs font-semibold text-on-surface truncate">Mysore Sandalwood &amp; Smoked Cedar</p>
+</div>
+</div>
+<div class="pt-3 bg-surface-container-low -mx-5 -mb-5 px-5 py-2.5 flex items-center justify-between text-[11px] text-on-surface-variant">
+<span>Re-Order Index: <strong class="text-secondary font-semibold">+6.2% QoQ</strong></span>
+<span class="text-tertiary">3,120 Patrons</span>
+</div>
+</div>
+</section>
+<!-- Middle Grid: Batch Curing Monitor & Raw Material Reserves -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Curing Room Live Monitor (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<h2 class="font-display-hero text-xl text-on-surface">Atmospheric Curing Chamber • Chamber 02</h2>
+</div>
+<p class="text-xs text-tertiary mt-0.5">Real-time olfactory settling, crystallization stabilization &amp; thermohydrometry tracking</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container text-xs font-medium text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">thermostat</span> 21.4°C
+            </span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-xs font-medium text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">water_drop</span> 48% RH
+            </span>
+</div>
+</div>
+<!-- Interactive Batch Curing Trackers -->
+<div class="space-y-4 mt-2">
+<!-- Batch 1 -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all hover:bg-surface-container">
+<div class="flex items-start gap-3.5 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary shadow-xs shrink-0">
+<span class="material-symbols-outlined text-[20px]">bubble_chart</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-mono text-xs font-bold text-secondary">#PB-1049</span>
+<h3 class="text-sm font-semibold text-on-surface truncate">Mysore Sandalwood &amp; Amber Resin</h3>
+<span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-secondary-fixed text-on-secondary-fixed">Curing (94%)</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1">48 / 50 vessels poured • Triple-Wicked 400g Amber Glass • Rest phase: 68h / 72h</p>
+</div>
+</div>
+<div class="flex items-center gap-4 shrink-0 justify-between md:justify-end">
+<div class="text-right">
+<span class="text-[11px] text-tertiary block">Next Protocol</span>
+<span class="text-xs font-semibold text-on-surface">Wick Trimming at 16:00 IST</span>
+</div>
+<div class="relative w-12 h-12 flex items-center justify-center">
+<!-- Circular Gauge SVG -->
+<svg class="w-12 h-12 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="94, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute text-[11px] font-bold text-on-surface">94%</span>
+</div>
+</div>
+</div>
+<!-- Batch 2 -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all hover:bg-surface-container">
+<div class="flex items-start gap-3.5 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-tertiary shadow-xs shrink-0">
+<span class="material-symbols-outlined text-[20px]">filter_vintage</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-mono text-xs font-bold text-secondary">#PB-1050</span>
+<h3 class="text-sm font-semibold text-on-surface truncate">Rose Bliss Botanical Extract</h3>
+<span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-surface-container-high text-on-surface">QC Inspection</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1">35 / 35 vessels poured • 220g Ceramic White • Surface smooth inspection running</p>
+</div>
+</div>
+<div class="flex items-center gap-4 shrink-0 justify-between md:justify-end">
+<div class="text-right">
+<span class="text-[11px] text-tertiary block">Inspector Master</span>
+<span class="text-xs font-semibold text-on-surface">C. Renoir (Signature Wax)</span>
+</div>
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-12 h-12 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="72, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute text-[11px] font-bold text-on-surface">72%</span>
+</div>
+</div>
+</div>
+<!-- Batch 3 -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all hover:bg-surface-container">
+<div class="flex items-start gap-3.5 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-outline shadow-xs shrink-0">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-mono text-xs font-bold text-secondary">#PB-1051</span>
+<h3 class="text-sm font-semibold text-on-surface truncate">Vanilla Dreams &amp; Bourbon Cask</h3>
+<span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-surface-container text-tertiary">Scheduled</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1">Target: 60 vessels • 65°C blend temp calibrated • Essential oils weighed</p>
+</div>
+</div>
+<div class="flex items-center gap-4 shrink-0 justify-between md:justify-end">
+<div class="text-right">
+<span class="text-[11px] text-tertiary block">Kettle Pre-Heat</span>
+<span class="text-xs font-semibold text-on-surface">Tomorrow • 09:30 AM IST</span>
+</div>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-medium text-on-surface">Pending Pour</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 mt-4 flex items-center justify-between text-xs text-tertiary">
+<span>Auto-logged by Sensirion IoT Atmospheric Probes</span>
+<button class="text-secondary font-semibold hover:underline flex items-center gap-1">
+          Inspect Historical Cure Logs
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Vessel Stock & Material Reserve Alert Widget (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between space-y-6">
+<div>
+<div class="flex items-center justify-between pb-3">
+<h2 class="font-display-hero text-lg text-on-surface">Critical Vessel Reserves</h2>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-[10px] font-bold uppercase tracking-wider text-on-tertiary-fixed">Stock Alert</span>
+</div>
+<p class="text-xs text-tertiary mb-4">Replenishment triggers calibrated against next week's 200-pour forecast.</p>
+<div class="space-y-3.5">
+<!-- Item 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-base">liquor</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-on-surface">Amber Apothecary 220g</p>
+<p class="text-[10px] text-secondary font-medium">Critical minimum reached</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-on-surface">14 left</span>
+<span class="block text-[10px] text-tertiary">Min: 50</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-base">interests</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-on-surface">Ceramic Fluted Pots</p>
+<p class="text-[10px] text-tertiary">Adequate reserve</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-on-surface">48 left</span>
+<span class="block text-[10px] text-tertiary">Min: 40</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-base">handyman</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-on-surface">Hand-Turned Brass Tools</p>
+<p class="text-[10px] text-on-surface-variant">Gifting kit stock low</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-on-surface">28 left</span>
+<span class="block text-[10px] text-tertiary">Min: 30</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 space-y-2">
+<button class="w-full py-2.5 px-4 rounded-lg bg-secondary-container hover:bg-secondary-fixed-dim text-on-primary-fixed text-xs font-semibold tracking-wider uppercase transition-colors flex items-center justify-center gap-2 shadow-xs">
+<span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span>
+          1-Click Reorder Raw Materials
+        </button>
+<span class="text-[10px] text-center block text-tertiary">PO automatically routed to Moradabad Foundry &amp; Firozabad Glass</span>
+</div>
+</div>
+</section>
+<!-- Live Consignments & Order Fulfillment Table -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-display-hero text-xl text-on-surface">Live Consignments &amp; Connoisseur Dispatches</h2>
+<span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-surface-container text-secondary">142 total</span>
+</div>
+<p class="text-xs text-tertiary mt-0.5">Real-time status of custom artisanal home fragrance orders</p>
+</div>
+<!-- Search & Filters -->
+<div class="flex flex-wrap items-center gap-2.5">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-outline text-[18px]">search</span>
+<input class="bg-surface-container-low pl-8 pr-3 py-1.5 rounded-lg text-xs text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface transition-all w-48 lg:w-56" id="orderSearchInput" onkeyup="filterConsignments()" placeholder="Filter by patron or city..." type="text"/>
+</div>
+<select class="bg-surface-container-low px-3 py-1.5 rounded-lg text-xs text-on-surface font-medium focus:outline-none cursor-pointer" id="stageFilter" onchange="filterConsignments()">
+<option value="ALL">All Stages</option>
+<option value="TRANSIT">In Transit - Hub</option>
+<option value="CURING">Curing Chamber 72h</option>
+<option value="READY">Ready to Dispatch</option>
+<option value="DELIVERED">Delivered</option>
+</select>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" title="Export CSV">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Responsive Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs" id="consignmentsTable">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant uppercase tracking-wider text-[10px]">
+<th class="py-3 px-4 rounded-l-lg font-semibold">Consignment ID</th>
+<th class="py-3 px-4 font-semibold">Connoisseur &amp; Destination</th>
+<th class="py-3 px-4 font-semibold">Vessel &amp; Fragrance</th>
+<th class="py-3 px-4 font-semibold">Value</th>
+<th class="py-3 px-4 font-semibold">Settlement</th>
+<th class="py-3 px-4 font-semibold">Stage</th>
+<th class="py-3 px-4 rounded-r-lg font-semibold text-right">Artisanal Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors consignment-row" data-stage="TRANSIT">
+<td class="py-3.5 px-4 font-mono font-semibold text-secondary">#LC-88294</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface connoisseur-name">Ananya Kapoor</div>
+<div class="text-[11px] text-tertiary">Bengaluru (560034)</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="text-on-surface font-medium">Sandalwood 220g Amber</div>
+<div class="text-[11px] text-tertiary">+ Solid Brass Wick Snuffer</div>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">₹1,572</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 text-[11px] font-medium text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> UPI Verified
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-surface-container text-on-surface-variant">
+                In Transit • Hub
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded hover:bg-surface-container text-tertiary hover:text-on-surface transition-colors" title="Print Scent Certificate">
+<span class="material-symbols-outlined text-[17px]">verified</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-secondary hover:text-secondary font-semibold transition-colors" title="Track Courier">
+<span class="material-symbols-outlined text-[17px]">near_me</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors consignment-row" data-stage="CURING">
+<td class="py-3.5 px-4 font-mono font-semibold text-secondary">#LC-88295</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface connoisseur-name">Vikramaditya Singhania</div>
+<div class="text-[11px] text-tertiary">Mumbai (400006)</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="text-on-surface font-medium">Rose Bliss Botanical (Reserve)</div>
+<div class="text-[11px] text-tertiary">+ Soy Wax Wax Melts Trio</div>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">₹2,240</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 text-[11px] font-medium text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Razorpay Card
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-secondary-fixed text-on-secondary-fixed">
+                Curing Chamber 72h
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded hover:bg-surface-container text-tertiary hover:text-on-surface transition-colors" title="View Dispatch Slip">
+<span class="material-symbols-outlined text-[17px]">description</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-tertiary hover:text-on-surface transition-colors" title="Print Scent Certificate">
+<span class="material-symbols-outlined text-[17px]">verified</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors consignment-row" data-stage="READY">
+<td class="py-3.5 px-4 font-mono font-semibold text-secondary">#LC-88291</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface connoisseur-name">Priya Krishnamurthy</div>
+<div class="text-[11px] text-tertiary">New Delhi (110003)</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="text-on-surface font-medium">Cèdre Noir Grand Ceramic</div>
+<div class="text-[11px] text-tertiary">Collector Wooden Box</div>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">₹3,450</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 text-[11px] font-medium text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> UPI Verified
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-tertiary-fixed text-on-tertiary-fixed">
+                Ready to Dispatch
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-secondary-container text-on-primary-fixed text-[11px] font-bold tracking-wider uppercase hover:bg-secondary-fixed-dim transition-all">
+                  Generate AWB
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors consignment-row" data-stage="TRANSIT">
+<td class="py-3.5 px-4 font-mono font-semibold text-secondary">#LC-88289</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface connoisseur-name">Rohan Mukherjee</div>
+<div class="text-[11px] text-tertiary">Bengaluru (560001)</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="text-on-surface font-medium">Vanilla Bourbon &amp; Cask Duo</div>
+<div class="text-[11px] text-tertiary">Fluted Ceramic Vessel</div>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">₹2,890</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 text-[11px] font-medium text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> UPI Verified
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-surface-container text-on-surface-variant">
+                In Transit • Hub
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded hover:bg-surface-container text-tertiary hover:text-on-surface transition-colors" title="Print Scent Certificate">
+<span class="material-symbols-outlined text-[17px]">verified</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-secondary font-semibold transition-colors" title="Track Courier">
+<span class="material-symbols-outlined text-[17px]">near_me</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors consignment-row" data-stage="DELIVERED">
+<td class="py-3.5 px-4 font-mono font-semibold text-secondary">#LC-88280</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface connoisseur-name">Devika Nambiar</div>
+<div class="text-[11px] text-tertiary">Chennai (600028)</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="text-on-surface font-medium">Oud &amp; Cashmere Noir</div>
+<div class="text-[11px] text-tertiary">Matte Black Apothecary</div>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">₹1,950</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 text-[11px] font-medium text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> COD Verified
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-surface-container-high text-on-surface">
+                Delivered • Handover
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded hover:bg-surface-container text-tertiary hover:text-on-surface transition-colors" title="View Feedback">
+<span class="material-symbols-outlined text-[17px]">star</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pt-4 mt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-tertiary">
+<span>Showing 5 of 142 live consignments today</span>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-medium hover:bg-surface-container-high">Previous</button>
+<span class="px-2 text-on-surface font-semibold">1</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-medium hover:bg-surface-container-high">Next</button>
+</div>
+</div>
+</section>
+<!-- Sensory Sales Distribution & Revenue Breakdown + Logistics Heatmap -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Olfactory Family Breakdown & Artisans (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between space-y-6">
+<div>
+<div class="flex items-center justify-between pb-3">
+<div>
+<h2 class="font-display-hero text-xl text-on-surface">Sensory Sales by Olfactory Family</h2>
+<p class="text-xs text-tertiary mt-0.5">Contribution to current month's revenue run-rate (₹8.42L total)</p>
+</div>
+<span class="text-xs font-semibold text-secondary">Q4 Portfolio</span>
+</div>
+<!-- Donut / Horizontal Stacked Visual Representation -->
+<div class="my-5 space-y-4">
+<!-- Family 1 -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-medium text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                Woody &amp; Resinous (Mysore Sandalwood, Smoked Cedar, Agarwood)
+              </span>
+<span class="font-semibold text-on-surface">48% • ₹4.04L</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 48%"></div>
+</div>
+</div>
+<!-- Family 2 -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-medium text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+                Warm Gourmand &amp; Vanilla (Bourbon Vanilla, Tonka, Amber)
+              </span>
+<span class="font-semibold text-on-surface">26% • ₹2.19L</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 26%"></div>
+</div>
+</div>
+<!-- Family 3 -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-medium text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                Botanical Pressed Florals (Rose Bliss, Night Jasmine, Neroli)
+              </span>
+<span class="font-semibold text-on-surface">18% • ₹1.51L</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 18%"></div>
+</div>
+</div>
+<!-- Family 4 -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="font-medium text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+                Heirloom Brass Care Accessories &amp; Extinguishers
+              </span>
+<span class="font-semibold text-on-surface">8% • ₹0.67L</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 8%"></div>
+</div>
+</div>
+</div>
+<!-- Pour Masters Leaderboard -->
+<div class="pt-5 border-t border-surface-container">
+<h3 class="text-xs uppercase tracking-wider font-semibold text-tertiary mb-3">Top Artisan Pour Masters • Quality Honor Roll</h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center font-serif text-xs font-bold text-on-secondary-container">CR</div>
+<div class="min-w-0">
+<p class="text-xs font-semibold text-on-surface truncate">C. Renoir</p>
+<p class="text-[10px] text-secondary font-medium">98.6% Zero-Tunnel Pass</p>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-serif text-xs font-bold text-on-surface">AS</div>
+<div class="min-w-0">
+<p class="text-xs font-semibold text-on-surface truncate">A. Sharma</p>
+<p class="text-[10px] text-tertiary font-medium">97.9% Pass • 110 Pours</p>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-serif text-xs font-bold text-on-surface">KP</div>
+<div class="min-w-0">
+<p class="text-xs font-semibold text-on-surface truncate">K. Patel</p>
+<p class="text-[10px] text-tertiary font-medium">97.2% Pass • 95 Pours</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Logistics Corridors & Pincode Velocity (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between space-y-6">
+<div>
+<div class="flex items-center justify-between pb-3">
+<h2 class="font-display-hero text-xl text-on-surface">Velocity Hubs &amp; Corridors</h2>
+<span class="flex items-center gap-1 text-[11px] font-medium text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span> Live Logistics
+          </span>
+</div>
+<p class="text-xs text-tertiary mb-4">Domestic express dispatch distribution via Blue Dart Aviation.</p>
+<!-- Corridors Progress List -->
+<div class="space-y-3.5">
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">domain</span> Bengaluru South (Indiranagar / Koramangala)
+              </span>
+<span class="font-bold text-on-surface">38%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary" style="width: 38%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">domain</span> Mumbai South &amp; Bandra West
+              </span>
+<span class="font-bold text-on-surface">26%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary" style="width: 26%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">domain</span> Delhi NCR (Vasant Vihar / Golf Links)
+              </span>
+<span class="font-bold text-on-surface">21%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary" style="width: 21%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">domain</span> Pune &amp; Hyderabad Jubilee Hills
+              </span>
+<span class="font-bold text-on-surface">15%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary" style="width: 15%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- SLA Box Alert -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[19px]">verified_user</span>
+</div>
+<div>
+<h4 class="text-xs font-semibold text-on-surface">Bengaluru Hub Dispatch SLA Status</h4>
+<p class="text-xs text-on-surface-variant mt-0.5">
+            0 courier transit delays reported today. Climate-controlled bubble insulated packaging pass rate: 
+            <strong class="text-secondary font-bold">99.8%</strong>.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pour Modal Template (Interactive with Vanilla JS) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4" id="newPourModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-6 shadow-xl space-y-5 animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div>
+<h3 class="font-display-hero text-xl text-on-surface">Commission Micro-Batch Pour</h3>
+<p class="text-xs text-tertiary">Assign kettle temperature, LOT code &amp; vessel allocations</p>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface" onclick="closePourModal()">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="space-y-4 text-xs">
+<div>
+<label class="block text-tertiary font-medium mb-1">Fragrance Formulation</label>
+<select class="w-full bg-surface-container-low px-3 py-2 rounded-lg text-on-surface focus:outline-none font-medium">
+<option>Mysore Sandalwood &amp; Smoked Cedar (Amber Resin Blend)</option>
+<option>Rose Bliss Pure Damask Botanical</option>
+<option>Vanilla Dreams &amp; Bourbon Barrel Oak</option>
+<option>Cèdre Noir &amp; Cardamom Bark</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-tertiary font-medium mb-1">Target Vessels Count</label>
+<input class="w-full bg-surface-container-low px-3 py-2 rounded-lg text-on-surface focus:outline-none font-medium" type="number" value="50"/>
+</div>
+<div>
+<label class="block text-tertiary font-medium mb-1">Vessel Silhouette</label>
+<select class="w-full bg-surface-container-low px-3 py-2 rounded-lg text-on-surface focus:outline-none font-medium">
+<option>220g Amber Apothecary</option>
+<option>400g Grand Ceramic Triple-Wick</option>
+<option>180g Fluted Terracotta</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-tertiary font-medium mb-1">Assigned Pour Master</label>
+<select class="w-full bg-surface-container-low px-3 py-2 rounded-lg text-on-surface focus:outline-none font-medium">
+<option>C. Renoir • Senior Lead</option>
+<option>A. Sharma • Master Chandler</option>
+<option>K. Patel • Botanical Craftsman</option>
+</select>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-end gap-3 border-t border-surface-container">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-medium text-xs hover:bg-surface-container-high transition-colors" onclick="closePourModal()">
+          Cancel
+        </button>
+<button class="px-4 py-2 rounded-lg bg-secondary-container hover:bg-secondary-fixed-dim text-on-primary-fixed font-semibold text-xs uppercase tracking-wider transition-colors shadow-xs" onclick="submitBatch()">
+          Initialize Pour Protocol
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function setDateFilter(element, period) {
+    const parent = element.parentElement;
+    parent.querySelectorAll('button').forEach(btn => {
+      btn.className = 'px-3 py-1.5 rounded-md font-medium text-on-surface-variant hover:text-on-surface transition-colors';
+    });
+    element.className = 'px-3 py-1.5 rounded-md font-semibold bg-surface-container-lowest text-on-surface shadow-xs transition-colors';
+  }
+
+  function filterConsignments() {
+    const searchVal = document.getElementById('orderSearchInput').value.toLowerCase();
+    const stageVal = document.getElementById('stageFilter').value;
+    const rows = document.querySelectorAll('.consignment-row');
+
+    rows.forEach(row => {
+      const name = row.querySelector('.connoisseur-name').textContent.toLowerCase();
+      const stage = row.getAttribute('data-stage');
+
+      const matchesSearch = name.includes(searchVal);
+      const matchesStage = stageVal === 'ALL' || stage === stageVal;
+
+      if (matchesSearch && matchesStage) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  function openPourModal() {
+    const modal = document.getElementById('newPourModal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closePourModal() {
+    const modal = document.getElementById('newPourModal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function submitBatch() {
+    alert('Pour Batch Commissioned: Atmospheric sensor logging started for Pondicherry Studio 01.');
+    closePourModal();
+  }
+</script></main></div></body></html>

@@ -1,7 +1,67 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Artisan Warm Luxury Canvas */
+  --color-surface: #FBF9F5;
+  --color-surface-low: #F5F0E8;
+  --color-surface-container-low: #F5F0E8;
+  --color-surface-container: #EFEEEA;
+  --color-surface-container-high: #EAE8E4;
+  --color-surface-container-highest: #E4E2DE;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-dim: #DBDAD6;
+
+  /* Typography Colors */
+  --color-on-surface: #1B1C1A;
+  --color-on-surface-variant: #4A4731;
+
+  /* Luxury Gold & Warm Accents */
+  --color-primary-gold: #FAB507;
+  --color-secondary-gold: #7B5800;
+  --color-tertiary-taupe: #8C827A;
+
+  /* Borders & Dividers */
+  --color-border-warm: #EAE5DE;
+  --color-outline: #7B785F;
+  --color-outline-variant: #CCC7AA;
+
+  /* Feedback */
+  --color-error: #BA1A1A;
+  --color-error-container: #FFDAD6;
+}
+
 @layer base {
-  body {
-    @apply bg-slate-900 text-slate-100 antialiased font-sans min-h-screen;
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--color-on-surface);
+  }
+}
+
+/* Custom Artisan Scrollbar (hidden on mobile, subtle on desktop) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F0E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #CCC7AA;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7B785F;
 }

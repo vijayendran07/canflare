@@ -1,13 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import healthReducer from './slices/healthSlice';
 import cartReducer from './slices/cartSlice';
 import authReducer from './slices/authSlice';
+import wishlistReducer from './slices/wishlistSlice';
+import uiReducer from './slices/uiSlice';
 
 export const store = configureStore({
   reducer: {
-    health: healthReducer,
     cart: cartReducer,
     auth: authReducer,
+    wishlist: wishlistReducer,
+    ui: uiReducer,
   },
   devTools: process.env.NODE_ENV !== 'production',
 });

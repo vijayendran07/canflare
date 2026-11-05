@@ -1,9 +1,12 @@
 import axios from 'axios';
 
-// Base API configuration
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
-const axiosInstance = axios.create({
+/**
+ * Reusable Axios Client Instance
+ * Configured with baseURL, default headers, and token interceptors
+ */
+const apiClient = axios.create({
   baseURL: API_BASE_URL,
   timeout: 10000,
   headers: {
@@ -11,29 +14,23 @@ const axiosInstance = axios.create({
   },
 });
 
-// Request Interceptor
-axiosInstance.interceptors.request.use(
+// Request Interceptor: Attach bearer token if present
+apiClient.interceptors.request.use(
   (config) => {
-    // Attach authorization token if present in localStorage
     const token = localStorage.getItem('token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
-  (error) => {
-    return Promise.reject(error);
-  }
+  (error) => Promise.reject(error)
 );
 
-// Response Interceptor
-axiosInstance.interceptors.response.use(
-  (response) => {
-    return response.data;
-  },
+// Response Interceptor: Standardize payload & error transformation
+apiClient.interceptors.response.use(
+  (response) => response.data,
   (error) => {
-    // Normalize error response
-    const customError = {
+    const formattedError = {
       message:
         error.response?.data?.message ||
         error.message ||
@@ -41,10 +38,9 @@ axiosInstance.interceptors.response.use(
       statusCode: error.response?.status || 500,
       data: error.response?.data || null,
     };
-
-    return Promise.reject(customError);
+    return Promise.reject(formattedError);
   }
 );
 
-export default axiosInstance;
+export default apiClient;
 
