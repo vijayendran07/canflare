@@ -163,26 +163,6 @@ export default function CatalogPage() {
             <span className="text-[#1B1C1A] font-semibold">Shop / All Candles</span>
           </nav>
 
-          {/* Editorial Title & Manifesto */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <div className="max-w-2xl space-y-2">
-              <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.25em] uppercase text-[#7B5800]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#7B5800]" />
-                Olfactory Catalogue • Series IV
-              </div>
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1B1C1A] leading-tight font-normal">
-                All Handcrafted Candles
-              </h1>
-              <p className="text-xs sm:text-sm text-[#4A4731] leading-relaxed font-light">
-                Poured with 100% botanical soy wax and artisanal botanical extracts in small batches. Slow-burning sanctuaries poured deliberately by master perfumers in Old Pondicherry.
-              </p>
-            </div>
-
-            <div className="flex items-center gap-3 text-xs text-[#4A4731] bg-[#FFFFFF] px-4 py-2.5 rounded-sm border border-[#EAE5DE] shadow-xs">
-              <Leaf className="w-4 h-4 text-[#7B5800]" />
-              <span>100% Vegan &amp; Non-Toxic Botanicals</span>
-            </div>
-          </div>
 
           {/* Quick Category Filter Pills (Horizontal Scroll) */}
           <div className="pt-2 flex items-center gap-2.5 overflow-x-auto no-scrollbar scroll-smooth">
@@ -193,11 +173,10 @@ export default function CatalogPage() {
                   key={pill}
                   type="button"
                   onClick={() => handlePillSelect(pill)}
-                  className={`shrink-0 px-4 py-2 rounded-sm text-xs uppercase tracking-wider transition-all cursor-pointer ${
-                    isActive
+                  className={`shrink-0 px-4 py-2 rounded-sm text-xs uppercase tracking-wider transition-all cursor-pointer ${isActive
                       ? 'bg-[#FAB507] text-[#1B1C1A] font-semibold shadow-xs'
                       : 'bg-[#FFFFFF] text-[#4A4731] hover:text-[#1B1C1A] hover:bg-[#EFEEEA] border border-[#EAE5DE] font-medium'
-                  }`}
+                    }`}
                 >
                   {pill}
                 </button>
@@ -284,11 +263,10 @@ export default function CatalogPage() {
                     type="button"
                     onClick={() => setGridCols(3)}
                     aria-label="3 Columns View"
-                    className={`p-1.5 rounded-sm transition-all cursor-pointer ${
-                      gridCols === 3
+                    className={`p-1.5 rounded-sm transition-all cursor-pointer ${gridCols === 3
                         ? 'bg-[#FFFFFF] text-[#1B1C1A] shadow-xs font-bold'
                         : 'text-[#7B785F] hover:text-[#1B1C1A]'
-                    }`}
+                      }`}
                   >
                     <Grid3X3 className="w-4 h-4" />
                   </button>
@@ -296,11 +274,10 @@ export default function CatalogPage() {
                     type="button"
                     onClick={() => setGridCols(4)}
                     aria-label="4 Columns View"
-                    className={`p-1.5 rounded-sm transition-all cursor-pointer ${
-                      gridCols === 4
+                    className={`p-1.5 rounded-sm transition-all cursor-pointer ${gridCols === 4
                         ? 'bg-[#FFFFFF] text-[#1B1C1A] shadow-xs font-bold'
                         : 'text-[#7B785F] hover:text-[#1B1C1A]'
-                    }`}
+                      }`}
                   >
                     <LayoutGrid className="w-4 h-4" />
                   </button>
@@ -328,9 +305,8 @@ export default function CatalogPage() {
               </div>
             ) : (
               <div
-                className={`grid grid-cols-1 sm:grid-cols-2 ${
-                  gridCols === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'
-                } gap-6 transition-all`}
+                className={`grid grid-cols-2 sm:grid-cols-2 ${gridCols === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'
+                  } gap-2 sm:gap-4 transition-all`}
               >
                 {filteredProducts.map((product) => (
                   <ProductCard key={product.id || product._id} product={product} />

@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import { addToCart } from '../redux/slices/cartSlice';
 import { toggleWishlistItem } from '../redux/slices/wishlistSlice';
-import { showToast } from '../redux/slices/uiSlice';
+import { showToast, openLoginModal } from '../redux/slices/uiSlice';
 import { formatCurrency } from '../utils/formatters';
 import apiClient from '../services/apiClient';
 
@@ -27,6 +27,7 @@ export default function ProductDetailsPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const wishlistItems = useSelector((state) => state.wishlist?.items || []);
+  const isAuthenticated = useSelector((state) => state.auth?.isAuthenticated);
 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -46,7 +47,6 @@ export default function ProductDetailsPage() {
   const [quantity, setQuantity] = useState(1);
   const [pincode, setPincode] = useState('');
   const [pincodeStatus, setPincodeStatus] = useState(null);
-  const [activeTab, setActiveTab] = useState('scent-pyramid');
   const [isAdding, setIsAdding] = useState(false);
 
   useEffect(() => {
@@ -101,6 +101,17 @@ export default function ProductDetailsPage() {
     : null;
 
   const handleAddToCart = () => {
+    if (!isAuthenticated) {
+      dispatch(openLoginModal('/cart'));
+      dispatch(
+        showToast({
+          message: 'Please sign in to add items to your cart.',
+          type: 'info',
+        })
+      );
+      return;
+    }
+
     setIsAdding(true);
     dispatch(
       addToCart({
@@ -267,7 +278,7 @@ export default function ProductDetailsPage() {
                 </span>
               </div>
               <p className="text-[11px] text-[#4A4731]">
-                Inclusive of all taxes. Free courier shipping on orders over ₹1,499.
+                Inclusive of all taxes.
               </p>
             </div>
 
@@ -433,149 +444,6 @@ export default function ProductDetailsPage() {
               )}
             </form>
           </div>
-        </div>
-      </section>
-
-      {/* 3. DETAILED OLFACTORY & SPECIFICATION TABS */}
-      <section className="w-full bg-[#F5F0E8] py-16 border-t border-[#EAE5DE]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 pb-10">
-            <button
-              type="button"
-              onClick={() => setActiveTab('scent-pyramid')}
-              className={`px-6 py-2.5 text-xs uppercase tracking-widest font-semibold rounded-sm transition-all cursor-pointer ${
-                activeTab === 'scent-pyramid'
-                  ? 'bg-white text-[#1B1C1A] shadow-sm border border-[#EAE5DE]'
-                  : 'bg-transparent text-[#4A4731] hover:text-[#1B1C1A]'
-              }`}
-            >
-              Fragrance Notes Breakdown
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('ritual-care')}
-              className={`px-6 py-2.5 text-xs uppercase tracking-widest font-semibold rounded-sm transition-all cursor-pointer ${
-                activeTab === 'ritual-care'
-                  ? 'bg-white text-[#1B1C1A] shadow-sm border border-[#EAE5DE]'
-                  : 'bg-transparent text-[#4A4731] hover:text-[#1B1C1A]'
-              }`}
-            >
-              Candle Care &amp; Rituals
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('sustainability')}
-              className={`px-6 py-2.5 text-xs uppercase tracking-widest font-semibold rounded-sm transition-all cursor-pointer ${
-                activeTab === 'sustainability'
-                  ? 'bg-white text-[#1B1C1A] shadow-sm border border-[#EAE5DE]'
-                  : 'bg-transparent text-[#4A4731] hover:text-[#1B1C1A]'
-              }`}
-            >
-              Sustainability &amp; Ingredients
-            </button>
-          </div>
-
-          {/* TAB 1: SCENT PYRAMID */}
-          {activeTab === 'scent-pyramid' && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
-              <div className="lg:col-span-5 aspect-square rounded-sm overflow-hidden shadow-xs border border-[#EAE5DE]">
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu6nVfy5nl-U6SoDXQ8X05KrzRLOQDu2gd_uSb7imyb6vJ04XuYLHF3dN39upUYkNaqtlMMmglYVlu6C1-IF1OjEgUOjbOyFgribf8ahYB1hSpeu_Eu7oM7XwAHMZVWVoqWIi6IBX_GexPE_DU_9rZFMhHIxDPT_Ia-XzCVcCtHNx-5wvq2HKS_Kj9vZ4tLMFCkX7-46dEckVSTxL2jx9TtsDJ8NS9a7nzDAs6b4Ei"
-                  alt="Aromatics and raw sandalwood"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="lg:col-span-7 space-y-4">
-                <h3 className="font-serif text-2xl text-[#1B1C1A]">The Olfactory Architecture</h3>
-                <p className="text-xs text-[#4A4731] leading-relaxed">
-                  Constructed in homage to centuries-old sacred wood rituals, this sensory composition develops in three delicate tiers, releasing slow balsamic warmth that grounds the spirit.
-                </p>
-                <div className="space-y-3 pt-2">
-                  <div className="bg-white p-4 rounded-sm border border-[#EAE5DE] shadow-xs">
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-[#7B5800]">
-                      Top Notes (0 — 15 Mins)
-                    </span>
-                    <p className="text-xs font-semibold text-[#1B1C1A] mt-0.5">
-                      {product.scentPyramid?.top?.join(' • ') || 'Crisp Cardamom • Italian Bergamot'}
-                    </p>
-                  </div>
-                  <div className="bg-white p-4 rounded-sm border border-[#EAE5DE] shadow-xs">
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-[#7B5800]">
-                      Heart Notes (15 — 60 Mins)
-                    </span>
-                    <p className="text-xs font-semibold text-[#1B1C1A] mt-0.5">
-                      {product.scentPyramid?.heart?.join(' • ') || 'Tuscan Iris • Violet Leaf • Smoked Cedar'}
-                    </p>
-                  </div>
-                  <div className="bg-white p-4 rounded-sm border border-[#EAE5DE] shadow-xs">
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-[#7B5800]">
-                      Base Notes (4+ Hours Lingering)
-                    </span>
-                    <p className="text-xs font-semibold text-[#1B1C1A] mt-0.5">
-                      {product.scentPyramid?.base?.join(' • ') || 'Aged Mysore Sandalwood • Amber Resin • Soft Musk'}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* TAB 2: RITUAL CARE */}
-          {activeTab === 'ritual-care' && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <div className="p-6 bg-white rounded-sm border border-[#EAE5DE] space-y-3">
-                <span className="font-serif text-2xl text-[#7B5800]">01</span>
-                <h4 className="font-serif text-lg text-[#1B1C1A]">The Memory Burn</h4>
-                <p className="text-xs text-[#4A4731] leading-relaxed">
-                  Allow your candle to burn for 2 to 3 hours on its first lighting until the wax melt pool reaches outer glass edges to permanently eliminate tunneling.
-                </p>
-              </div>
-              <div className="p-6 bg-white rounded-sm border border-[#EAE5DE] space-y-3">
-                <span className="font-serif text-2xl text-[#7B5800]">02</span>
-                <h4 className="font-serif text-lg text-[#1B1C1A]">Trim to 1/4 Inch</h4>
-                <p className="text-xs text-[#4A4731] leading-relaxed">
-                  Always trim cotton wicks or pinch charred wood to 5mm before lighting. A neat wick ensures clean, soot-free glass and optimal fragrance throw.
-                </p>
-              </div>
-              <div className="p-6 bg-white rounded-sm border border-[#EAE5DE] space-y-3">
-                <span className="font-serif text-2xl text-[#7B5800]">03</span>
-                <h4 className="font-serif text-lg text-[#1B1C1A]">Safe Sanctuary</h4>
-                <p className="text-xs text-[#4A4731] leading-relaxed">
-                  Burn on heat-resistant surfaces away from drafts. Extinguish after 4 consecutive hours using a metal snuffer to prevent smoldering.
-                </p>
-              </div>
-            </div>
-          )}
-
-          {/* TAB 3: SUSTAINABILITY */}
-          {activeTab === 'sustainability' && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="p-6 bg-white rounded-sm border border-[#EAE5DE] space-y-2">
-                <h4 className="font-serif text-lg text-[#1B1C1A]">100% Non-GMO Botanical Soy</h4>
-                <p className="text-xs text-[#4A4731] leading-relaxed">
-                  Biodegradable, completely paraffin-free wax sustainably harvested from certified ethical farms.
-                </p>
-              </div>
-              <div className="p-6 bg-white rounded-sm border border-[#EAE5DE] space-y-2">
-                <h4 className="font-serif text-lg text-[#1B1C1A]">Phthalate-Free Essences</h4>
-                <p className="text-xs text-[#4A4731] leading-relaxed">
-                  Blended strictly with therapeutic-grade pure botanical essential oils adhering to IFRA safety standards.
-                </p>
-              </div>
-              <div className="p-6 bg-white rounded-sm border border-[#EAE5DE] space-y-2">
-                <h4 className="font-serif text-lg text-[#1B1C1A]">Upcyclable Heavy Vessels</h4>
-                <p className="text-xs text-[#4A4731] leading-relaxed">
-                  Apothecary glass designed to be easily repurposed as brush cups, planters, or desk organizers.
-                </p>
-              </div>
-              <div className="p-6 bg-white rounded-sm border border-[#EAE5DE] space-y-2">
-                <h4 className="font-serif text-lg text-[#1B1C1A]">FSC Certified Crackling Wood</h4>
-                <p className="text-xs text-[#4A4731] leading-relaxed">
-                  Crackling wood wicks gathered from sustainably managed North American forests.
-                </p>
-              </div>
-            </div>
-          )}
         </div>
       </section>
     </div>

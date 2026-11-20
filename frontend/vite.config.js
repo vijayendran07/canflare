@@ -9,7 +9,14 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
+    host: true, // Exposes on all network interfaces (0.0.0.0 / Wi-Fi)
     port: 5173,
     open: false,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5001',
+        changeOrigin: true,
+      },
+    },
   },
 });

@@ -4,6 +4,8 @@ const initialState = {
   isCartDrawerOpen: false,
   isMobileNavOpen: false,
   searchQuery: '',
+  isLoginModalOpen: false,
+  loginModalRedirectPath: null, // path to go to after login
   toast: {
     visible: false,
     message: '',
@@ -24,6 +26,14 @@ const uiSlice = createSlice({
     setSearchQuery: (state, action) => {
       state.searchQuery = action.payload;
     },
+    openLoginModal: (state, action) => {
+      state.isLoginModalOpen = true;
+      state.loginModalRedirectPath = action.payload || null;
+    },
+    closeLoginModal: (state) => {
+      state.isLoginModalOpen = false;
+      state.loginModalRedirectPath = null;
+    },
     showToast: (state, action) => {
       state.toast = {
         visible: true,
@@ -41,6 +51,8 @@ export const {
   toggleCartDrawer,
   toggleMobileNav,
   setSearchQuery,
+  openLoginModal,
+  closeLoginModal,
   showToast,
   hideToast,
 } = uiSlice.actions;

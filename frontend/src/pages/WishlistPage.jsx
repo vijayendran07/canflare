@@ -13,14 +13,20 @@ import {
 } from 'lucide-react';
 import { addToCart } from '../redux/slices/cartSlice';
 import { removeWishlistItem, clearWishlist } from '../redux/slices/wishlistSlice';
-import { showToast } from '../redux/slices/uiSlice';
+import { showToast, openLoginModal } from '../redux/slices/uiSlice';
 import { formatCurrency } from '../utils/formatters';
 
 export default function WishlistPage() {
   const dispatch = useDispatch();
   const wishlistItems = useSelector((state) => state.wishlist?.items || []);
+  const isAuthenticated = useSelector((state) => state.auth?.isAuthenticated);
 
   const handleMoveToCart = (item) => {
+    if (!isAuthenticated) {
+      dispatch(openLoginModal('/cart'));
+      dispatch(showToast({ message: 'Please sign in to add items to your basket.', type: 'info' }));
+      return;
+    }
     dispatch(
       addToCart({
         id: item.id,
@@ -35,6 +41,11 @@ export default function WishlistPage() {
   };
 
   const handleMoveAllToCart = () => {
+    if (!isAuthenticated) {
+      dispatch(openLoginModal('/cart'));
+      dispatch(showToast({ message: 'Please sign in to add items to your basket.', type: 'info' }));
+      return;
+    }
     wishlistItems.forEach((item) => {
       dispatch(
         addToCart({

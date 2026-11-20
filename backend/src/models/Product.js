@@ -38,28 +38,13 @@ const productSchema = new mongoose.Schema(
     category: {
       type: String,
       required: true,
-      enum: [
-        'Scented Candles',
-        'Floral Candles',
-        'Luxury Candles',
-        'Gift Sets',
-        'Aromatics',
-        'Botanicals',
-        'Atelier',
-        'Gifting',
-      ],
+      trim: true,
       default: 'Scented Candles',
     },
     fragranceFamily: {
       type: String,
       required: true,
-      enum: [
-        'Woody & Resinous',
-        'Floral & Botanical',
-        'Fresh & Herbaceous',
-        'Gourmand & Sweet',
-        'Oriental & Spiced',
-      ],
+      trim: true,
       default: 'Woody & Resinous',
     },
     olfactoryIntensity: {
