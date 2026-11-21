@@ -28,3 +28,13 @@ Thumbs.db
 *.sln
 *.sw?
 
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+legacy/**/node_modules/
+
+# Raw owner photos (contain real customers' names/events) – never commit
+raw product images/

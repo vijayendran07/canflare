@@ -1,17 +1,35 @@
 {
-  "name": "ecommerce-mern-monorepo",
+  "name": "canflare",
   "version": "1.0.0",
-  "description": "Full-Stack MERN E-Commerce Platform",
   "private": true,
   "scripts": {
-    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,cyan\" \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "dev:backend": "npm --prefix backend run dev",
-    "dev:frontend": "npm --prefix frontend run dev",
-    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
-    "build:frontend": "npm --prefix frontend run build"
+    "dev": "node scripts/image-hashes.mjs && next dev",
+    "build": "node scripts/image-hashes.mjs && next build",
+    "start": "next start",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "mock-sheet": "node scripts/mock-sheet.mjs"
+  },
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.7",
+    "zustand": "^5.1.0"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "axe-core": "^4.14.1",
+    "lighthouse": "^13.6.0",
+    "playwright-core": "^1.65.1",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2",
+    "vite": "^6.4.6",
+    "vitest": "^3.2.7"
   }
 }
-

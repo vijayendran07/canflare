@@ -1,0 +1,46 @@
+[
+  {
+    "page": "Home",
+    "perf": 100,
+    "a11y": 96,
+    "bp": 100,
+    "seo": 100,
+    "lcp": "1.2 s",
+    "cls": "0",
+    "tbt": "50 ms",
+    "jsKB": 157
+  },
+  {
+    "page": "Category",
+    "perf": 100,
+    "a11y": 95,
+    "bp": 100,
+    "seo": 100,
+    "lcp": "1.1 s",
+    "cls": "0",
+    "tbt": "60 ms",
+    "jsKB": 157
+  },
+  {
+    "page": "Product",
+    "perf": 90,
+    "a11y": 96,
+    "bp": 100,
+    "seo": 100,
+    "lcp": "3.6 s",
+    "cls": "0",
+    "tbt": "70 ms",
+    "jsKB": 160
+  },
+  {
+    "page": "Checkout",
+    "perf": 93,
+    "a11y": 96,
+    "bp": 100,
+    "seo": 69,
+    "lcp": "3.2 s",
+    "cls": "0.047",
+    "tbt": "60 ms",
+    "jsKB": 162
+  }
+]

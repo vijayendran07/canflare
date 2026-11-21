@@ -1,0 +1,7 @@
+*{box-sizing:border-box;margin:0}body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.candle{position:relative;width:90px;height:150px;margin:0 auto}
+.candle .body{position:absolute;bottom:0;left:15px;width:60px;height:105px;border-radius:8px;background:linear-gradient(90deg,#e6d3ac,#f7ecd2 45%,#e6d3ac)}
+.candle .wick{position:absolute;bottom:105px;left:44px;width:3px;height:12px;background:#3b2b1a}
+.candle .flame{position:absolute;bottom:115px;left:36px;width:18px;height:34px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:linear-gradient(#fff3c4,#ffb300 60%,#f08a00);box-shadow:0 0 30px 12px rgba(250,181,7,.55)}
+.jar{border-radius:14px;background:linear-gradient(90deg,#cdb98f,#f1e4c3 45%,#cdb98f);width:84px;height:90px;margin:0 auto;position:relative}
+.jar:before{content:"";position:absolute;top:-8px;left:-3px;right:-3px;height:10px;background:#1b1c1a;border-radius:4px}

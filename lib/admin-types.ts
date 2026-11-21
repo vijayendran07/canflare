@@ -1,0 +1,32 @@
+export const STATUSES = ["New", "Confirmed", "Packed", "Shipped", "Delivered"] as const;
+export type Status = (typeof STATUSES)[number] | "Cancelled";
+
+export type AdminOrder = {
+  id: string;
+  date: string;
+  status: Status;
+  itemsText: string;
+  items: { slug?: string; name: string; variant?: string; qty: number; price: number }[];
+  itemCount: number;
+  subtotal: number;
+  delivery: number;
+  giftWrap: number;
+  discount: number;
+  total: number;
+  payment: string;
+  name: string;
+  mobile: string;
+  whatsapp: string;
+  address: string;
+  city: string;
+  state: string;
+  district: string;
+  pincode: string;
+  giftMessage: string;
+  note: string;
+  courier: string;
+  tracking: string;
+  source: string;
+  adminNote: string;
+  updatedAt: string;
+};
